@@ -1,0 +1,123 @@
+@import variables
+
+.map-position
+    background-color: $main-color
+    color: white
+    position: absolute
+    width: 32px
+    height: 32px
+    font-size: 1rem
+    font-weight: bold
+    border-radius: 16px
+    border: 2px solid white
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: 300ms all
+    z-index: 2
+    .d-relative
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 32px
+            height: 32px
+            border-radius: 50%
+            background-color: transparent
+            z-index: -1
+            border: 3px solid white
+            animation: 1s map-circle infinite
+    &#MP00
+        font-size: 1.2rem
+        background-color: red
+        left: 66.00%
+        top: 32.69%
+    &#MP01
+        left: 33.75%
+        top: 37.09%
+    &#MP02
+        left: 34.75%
+        top: 49.09%
+    &#MP03
+        left: 48.75%
+        top: 35.09%
+    &#MP04
+        left: 66.75%
+        top: 38.69%
+    &#MP05
+        left: 78.75%
+        top: 36.69%
+    &#MP06
+        left: 52.75%
+        top: 55.09%
+    &#MP07
+        left: 34.25%
+        top: 69.09%
+    &#MP08
+        left: 30.25%
+        top: 62.09%
+    &#MP09
+        left: 18.25%
+        top: 82.09%
+    &#MP10
+        left: 34.85%
+        top: 79.09%
+    &#MP11
+        left: 69.45%
+        top: 57.5%
+    &#MP12
+        left: 14.3%
+        top: 55.69%
+    &#MP13
+        left: 29.85%
+        top: 78.5%
+    &:hover
+        background-color: #8ebbce
+        transform: translate(-2px, -2px)
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, .5)
+        .d-relative
+            &::before
+                animation: none
+    &.hide
+        transform: scale(0)
+
+.map-popup
+    width: 300px
+    position: absolute
+    left: 50px
+    top: -40px
+    z-index: 3
+    animation: .6s map-popup
+    > .shadow
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, .3)
+
+.map-list-each
+    width: 100%
+
+.map-list-title
+    position: absolute
+    left: -40px
+    top: 0
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+
+@keyframes map-circle
+    0%
+        width: 33px
+        height: 33px
+    100%
+        width: 60px
+        height: 60px
+        opacity: 0
+
+@keyframes map-popup
+    0%
+        opacity: 0
+    100%
+        opacity: 1

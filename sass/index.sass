@@ -11,9 +11,48 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    box-shadow: 0 0 30px rgba(0,0,0,.8)
     .ground
         display: flex
         height: 200px
         flex-direction: column
         justify-content: flex-end
         background-color: white
+
+.parallax-window
+    background: transparent;
+
+.gmc
+    width: 100%
+    height: 280px
+    position: relative
+
+    .gm
+        border: 10px solid #EEEEEE
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
+        width: 40%
+        height: 100%
+        overflow: hidden
+        position: absolute
+        text-align: center
+    &.on
+        transform: scale(1.05) !important
+        transition: .3s
+
+    .btn
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        cursor: pointer
+
+    .right-btn
+        right: 0    
+
+    .left-btn
+        left: 0
+
+    img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)

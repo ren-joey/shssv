@@ -1,23 +1,93 @@
 @import variables
-  
+
 .header_bar
-  position: fixed
-  height: 80px
-  display: flex
-  left: 0
-  top: 0
-  right: 0
-  z-index: 2
-  background-color: white
-  box-shadow: 0 0 10px rgba(0, 0, 0, .3)
-  .brand
-    cursor: pointer
-  .navs
-    margin-left: auto
+    position: fixed
+    height: 80px
     display: flex
-    .nav
-      cursor: pointer
+    left: 0
+    top: 0
+    right: 0
+    z-index: 5
+    background-color: white
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+    border-bottom: $gradient-blue-1 5px solid
+    .brand
+        cursor: pointer
+    .navs
+        margin-left: auto
+        display: flex
+        .nav
+            cursor: pointer
+            transition: .5s all
+            text-decoration: none
+            position: relative
+            &::after
+                display: block
+                position: absolute
+                content: ""
+                height: 1px
+                background-color: $gradient-blue-1
+                width: 0
+                left: 50%
+                bottom: -3px
+                transform: translateX(-50%)
+                transition: .5s all
+            &:hover
+                transform: scale(.9)
+                &::after
+                    width: 80%
 
 .main_border
-  border: 1px solid $light-grey
-  border-radius: 3px
+    border: 1px solid $main-color
+    border-radius: 3px
+
+.grey-border
+    border: 1px solid $main-grey
+    border-radius: 3px
+
+.parallax_right
+    position: absolute
+    right: 0
+    bottom: 0
+    top: 0
+    width: 210px
+    &.sm
+        width: 150px
+    &.lg
+        width: 300px
+    &.h-200
+        bottom: -50%;
+
+.parallax_left
+    position: absolute
+    left: 0
+    bottom: 0
+    top: 0
+    width: 210px
+    &.sm
+        width: 150px
+    &.lg
+        width: 300px
+    &.h-200
+        top: -200%
+
+.main-line
+    height: 12px
+    background-size: cover
+    background-position: center center
+
+.btn-main
+    color: white
+    background: linear-gradient(to bottom, #7cd4ea 0%,#4ca2be 100%)
+
+.btn-outline-grey
+    background-color: transparent
+    color: #AAA
+    border: 1px solid #AAA
+
+.btn
+    &:active
+        &.btn-main
+            background: linear-gradient(to bottom, #7cd4ea 0%,#4ca2be 100%) !important
+        &.btn-outline-grey
+            background-color: transparent !important

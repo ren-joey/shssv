@@ -1,8 +1,10 @@
+doctype html
 html
   head
     title 松鶴山水
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
     meta(name= "title", content= "")
     meta(name= "description", content= "")
     meta(name= "keywords", content= "" )
@@ -27,6 +29,9 @@ html
     // jQuery 3.3.1
     script(src="./libraries/jquery.min.js")
 
+    // jQuery 1.11.0
+    //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+
     // Bootstrap 4.0
     link(rel="stylesheet", href="./libraries/bootstrap.min.css")
     script(src="./libraries/bootstrap.min.js")
@@ -35,6 +40,7 @@ html
     script(src="./libraries/TweenMax.js")
 
     // global style
+    link(rel="stylesheet", href="./css/reset.css")
     link(rel="stylesheet", href="./css/global.css")
     link(rel="stylesheet", href="./css/main.css")
 

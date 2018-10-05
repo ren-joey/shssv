@@ -1,18 +1,289 @@
 extends ./_global/page
 
 block head_end
+    link(rel="stylesheet", href="./css/scenery.css")
+    script(src="./js/scenery.js")
+
+    // isotope
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js")
 
 block body_content
+
     main.wrapper
-        section
-            img(src="./images/map_01.png", alt="", width="100%", height="auto")
+        section.bg-sky.pt-5
+            #MAP.container.d-relative
+                #MP00.map-position
+                    .d-relative
+                        | ★
+                #MP01.map-position.entertainment
+                    .d-relative
+                        | 1
+                #MP02.map-position.entertainment
+                    .d-relative
+                        | 2
+                #MP03.map-position.scene
+                    .d-relative
+                        | 3
+                #MP04.map-position.present
+                    .d-relative
+                        | 4
+                #MP05.map-position.food
+                    .d-relative
+                        | 5
+                #MP06.map-position.entertainment
+                    .d-relative
+                        | 6
+                #MP07.map-position.food
+                    .d-relative
+                        | 7
+                #MP08.map-position.entertainment
+                    .d-relative
+                        | 8
+                #MP09.map-position.scene
+                    .d-relative
+                        | 9
+                #MP10.map-position.food
+                    .d-relative
+                        | 10
+                #MP11.map-position.scene
+                    .d-relative
+                        | 11
+                #MP12.map-position.food
+                    .d-relative
+                        | 12
+                #MP13.map-position.present
+                    .d-relative
+                        | 13
+                img(src="./images/map_01.png", alt="", width="100%", height="auto")
             .gallery_bar
         section
-            .h-100px
-            .container
-                .row.justify-content-center
-                    .col-10
-                        .main_border.p-4
-                            | Shanshuei 台中谷關‧松鶴山水 位於台中市和平區，層疊群山環繞的環境有著清逸秀麗的美麗風景，讓人感到身心舒暢，彷彿所有煩憂都被隔絕在這綠油油的山林之外，四周充t斥著芬多精，大口呼吸便能感覺清新的空氣在體內沸騰，帶給您都市沒有的愜意自在。
+            .container.mt-4
+                .map-list-menu.mb-5.text-center.f-lg
+                        a.px-4.border-right.border-grey(href="javascript: void(0);", onclick="filter()") 全部
+                        a.px-4.border-right.border-grey(href="javascript: void(0);", onclick="filter('.scene')") 風景
+                        a.px-4.border-right.border-grey(href="javascript: void(0);", onclick="filter('.entertainment')") 娛樂
+                        a.px-4.border-right.border-grey(href="javascript: void(0);", onclick="filter('.food')") 美食
+                        a.px-4(href="javascript: void(0);", onclick="filter('.present')") 送禮
+                #ML.map-list.d-flex.flex-column
+                    .map-list-each.entertainment.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_02_travel_entertainment.svg", alt="")
+                            .text-nowrap 1. 德芙蘭農場
+                        .row
+                            .col-12.col-md-8
+                                ol.f-grey.f-sm
+                                    li 露營區
+                                    li 1.兒童遊戲沙坑
+                                    li 2.兒童戲水池
+                                    li 3.溜滑梯
+                                    li 4.森林步道
+                                hr
+                                p.f-grey.f-sm
+                                    | 連絡電話 0955-497-898
+                            .col-12.col-md-4
+                                img(src="./images/map_list_01.jpg", alt="")
 
+                    .map-list-each.entertainment.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_02_travel_entertainment.svg", alt="")
+                            .text-nowrap 2. 德芙蘭農場
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 狩獵戰場模擬射擊傳統射箭、泰雅手工藝DIY、生態導覽、原住民風味餐、漁獵戰場、捕魚體驗、山林夜間探索
+                                    br
+                                    | 集合點：沐樂居民宿
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0918-770-439
+                            .col-12.col-md-4
+                                img(src="./images/map_list_02.jpg", alt="")
+
+                    .map-list-each.scene.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_05_scene.svg", alt="")
+                            .text-nowrap 3. 德芙蘭生態步道
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 被譽為「谷關最優美的步道」，全程3公里的環狀步道，路段多為緩坡適合全家大小健走
+                            .col-12.col-md-4
+                                img(src="./images/map_list_03.jpg", alt="")
+
+                    .map-list-each.present.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_03_present.svg", alt="")
+                            .text-nowrap 4. 阿嬌姨的店
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 販售/寄賣在地山產及食品
+                                    br
+                                    | 紅藜饅頭、黑木耳露、五葉松汁、季節水果與蔬菜
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 (04)2594-3439
+                            .col-12.col-md-4
+                                img(src="./images/map_list_04.jpg", alt="")
+
+                    .map-list-each.food.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_04_food.svg", alt="")
+                            .text-nowrap 5. 魚之鄉鱘龍魚
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 餐飲/養殖/休閒
+                                    br
+                                    | 以食材去搭配食材,讓食物的味道更有層次
+                                    br
+                                    | 鱘龍魚 + 新亞洲無國界料理
+                                    br
+                                    | 讓您一再回味的動人料理
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 (04)2594-3349
+                            .col-12.col-md-4
+                                img(src="./images/map_list_05.jpg", alt="")
+
+                    .map-list-each.entertainment.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_02_travel_entertainment.svg", alt="")
+                            .text-nowrap 6. 達娜萊露營區
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 達娜萊，泰雅話意指「驚訝」的意思。
+                                    br
+                                    | 露營區內寬敞舒適，備有兒童浴池，不定時舉辦民歌歡唱及互動活動等。
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0979-334-213
+                            .col-12.col-md-4
+                                img(src="./images/map_list_06.jpg", alt="")
+
+                    .map-list-each.food.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_04_food.svg", alt="")
+                            .text-nowrap 7. 古拉斯風味餐
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 格妮婩原汁原味溫暖手作紅藜饅頭、黑木耳露、小米酒、五葉松汁、純天然手工食品
+                                    br
+                                    | 現場DIY製作(限假日)
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0958-007-335
+                            .col-12.col-md-4
+                                img(src="./images/map_list_07.jpg", alt="")
+
+                    .map-list-each.entertainment.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_02_travel_entertainment.svg", alt="")
+                            .text-nowrap 8. 松滋露營區
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 風景優美、場地遼闊
+                                    br
+                                    | 環境舒適整潔
+                                    br
+                                    | 適合全家大小一起同歡
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0955-779-235
+                            .col-12.col-md-4
+                                img(src="./images/map_list_08.jpg", alt="")
+
+                    .map-list-each.scene.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_05_scene.svg", alt="")
+                            .text-nowrap 9. 唐麻丹山步道
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 唐麻丹山是「谷關七雄」之一，海拔1305公尺，步道連接「蝴蝶谷瀑布」，造福了喜愛登山與遊山玩水的遊客
+                            .col-12.col-md-4
+                                img(src="./images/map_list_09.jpg", alt="")
+
+                    .map-list-each.food.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_04_food.svg", alt="")
+                            .text-nowrap 10. 東昌養鱒場
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 餐廳只有禮拜天及國定假日的中午才有提供虹鱒或鱘龍魚的料理
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0937-238-893
+                            .col-12.col-md-4
+                                img(src="./images/map_list_10.jpg", alt="")
+
+                    .map-list-each.scene.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_05_scene.svg", alt="")
+                            .text-nowrap 11. 久良栖林場巷
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 「久良梄」是松鶴部落在日治時代的舊地名
+                                    br
+                                    | 巷內有日據時代榮民古厝及百年歷史古厝 - 檜木板屋等歷史建築
+                            .col-12.col-md-4
+                                img(src="./images/map_list_11.jpg", alt="")
+
+                    .map-list-each.food.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_04_food.svg", alt="")
+                            .text-nowrap 12. 谷關山景餐廳
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | 鱘龍魚新鮮味美、雞肉Q彈，恍如置身山雲間用餐
+                                p.text-danger.f-sm
+                                    | ★例假日與連續假日用餐需提前「一天以上」預約
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 (04)2594-3788
+                            .col-12.col-md-4
+                                img(src="./images/map_list_12.jpg", alt="")
+
+                    .map-list-each.present.rounded.border.grey-border.p-4.mb-5.d-relative
+                        .px-3.map-list-title.bg-white.f-md.f-grey
+                            .w-50px.mr-2
+                                img(src="./images/svg_03_present.svg", alt="")
+                            .text-nowrap 13. 神農谷段木香菇
+                        .row
+                            .col-12.col-md-8
+                                p.f-grey.f-sm
+                                    | GAP全球優良農業
+                                    br
+                                    | 通過有機無毒認證
+                                    br
+                                    | 產品包含：
+                                    br
+                                    | 神農谷段木香菇(乾)
+                                    br
+                                    | 神農谷段木香菇(濕)
+                                p.text-danger.f-sm
+                                    | ★產季為10月至隔年2月
+                                hr
+                                p.f-grey.f-sm
+                                    | 聯絡電話 0913-311-580
+                            .col-12.col-md-4
+                                img(src="./images/map_list_13.jpg", alt="")
             .h-100px

@@ -13,9 +13,87 @@ block body_content
             .container
                 .row
                     .col-12.col-md-8
-                        img(src="./images/temp_01.jpg", alt="", width="100%", height="auto")
+                        .room-info
+                            .room-capacity.rounded.bg-main.text-white.d-flex.align-items-center.f-md.px-4.py-1
+                                div 可容納房客數 2 人
+                                .ml-auto.d-flex
+                                    img.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.d-block(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                            .room-tools.rounded.border.px-4.py-3.f-main.mt-5.d-relative
+                                .room-info-title.f-main.f-md.bg-white.px-3.py-2
+                                    | 住戶守則
+                                .row
+                                    .col-12.col-lg-6.border-right.p-2.f-xs
+                                        ul
+                                            li 退房時間為早上11點，敬請配合
+                                            li 深夜23:00後馬達停止，屆時水壓較小，熱水需稍作等候
+                                            li 請愛惜會館設備，如有損壞需照價賠償
+                                            li 請勿使用高功率設備以免跳電(如電暖爐、電磁爐等)
+                                            li 離開時請隨手關閉冷氣節約能源
+                                            li 電熱水壺僅供煮開水使用
+                                    .col-12.col-lg-6.p-2.f-xs
+                                        ul
+                                            li 客房內禁止吸菸
+                                            li 客房內禁止開伙
+                                            li 請勿攜帶寵物入住
+                                            li 早上9:00前及深夜23:00後請勿喧嘩
+                                    .col-12.text-center.f-2xs.mt-4
+                                        p
+                                            | 良好的居住品質，需要大家共同維護
+                                            br
+                                            span.f-sm 謝謝配合
+                            .room-services.mt-5
+                                .row
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_01_lock.png)")
+                                            | 感應門禁
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_02_park.png)")
+                                            | 專屬車位
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_03_view.png)")
+                                            | 超大景館
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_04_bottle.png)")
+                                            | 電熱水瓶
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_05_tea.png)")
+                                            | 茶包
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_06_coffee.png)")
+                                            | 咖啡包
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_07_wifi.png)")
+                                            | 無線網路
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_08_tv.png)")
+                                            | 電視
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_09_washing.png)")
+                                            | 盥洗用具
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_10_sleep.png)")
+                                            | 寢具
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_11_coffee.png)")
+                                            | 共用咖啡機
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_12_hair.png)")
+                                            | 吹風機
                     .col-12.col-md-4
-                        .main_border.p-4
+                        .border.p-4
                             .f-lg.f-main.font-weight-bold
                                 | 清新雙人房
                             .d-flex.f-xs.f-main
@@ -23,4 +101,13 @@ block body_content
                                 .px-1 1間臥室
                                 .px-1 1張床
                                 .px-1 1間浴室
+                            .my-2
+                                .main-line(style="background-image: url(./images/line_sm.png);")
+                            .f-grey.f-sm
+                                | 房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹
+                            .mt-5
+                                button.btn.btn-outline-grey.rounded.px-3.py-2.w-100
+                                    | 其他房型
+                                button.btn.btn-main.rounded.px-3.py-2.w-100.mt-2
+                                    | 馬上預定
             .h-100px

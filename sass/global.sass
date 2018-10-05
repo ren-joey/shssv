@@ -4,6 +4,17 @@ body
     font-size: 16px
     font-family: "Microsoft JhengHei"
 
+img:not([width])
+    width: 100%
+    height: auto
+
+.img-7-5
+    margin-top: -0.5rem
+    margin-left: -0.5rem
+    margin-right: -0.5rem
+    padding-top: calc( (100% + 1rem) * 5 / 7)
+    background-size: cover
+
 .f-2xl
     font-size: 3.6rem
     letter-spacing: 4px
@@ -32,6 +43,11 @@ body
     letter-spacing: 2px
     line-height: 1.4rem
 
+.f-2xs
+    font-size: .6rem
+    letter-spacing: 1px
+    line-height: 1rem
+
 .f-main
     color: $main-color
 
@@ -41,8 +57,23 @@ body
 .f-green
     color: $main-green
 
+.bg-white
+    background-color: white
+
+.bg-main
+    background-color: $main-color
+
+.bg-light-grey
+    background-color: #f2f2f1
+
+.bg-sky
+    background-color: #d9f1f4
+
 .o-h
     overflow: hidden
+
+.w-50px
+    width: 50px
 
 .h-100px
     height: 100px
@@ -55,3 +86,12 @@ body
 
 .h-100vh
     height: 100vh
+
+.mh-100vh
+    min-height: 100vh
+
+.d-relative
+    position: relative
+
+.box-shadow-inset
+    box-shadow: 0 0 50px black inset
