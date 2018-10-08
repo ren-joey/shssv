@@ -17,11 +17,11 @@ block body_content
                 img(src="./images/svg_16_logo_shield.svg", alt="", width="100", height="auto")
             .py-2
                 img(src="./images/svg_15_logo_tw_lg.svg", alt="", width="310", height="auto")
-            .py-2
-                img(src="./images/svg_14_logo_en.svg", alt="", width="1320", height="auto")
-            .py-2
-                img(src="./images/line_lg.png", alt="", width="1314", height="auto")
-            .py-2.f-grey.f-md
+            .py-2.w-80
+                img(src="./images/svg_14_logo_en.svg", alt="", width="100%", height="auto")
+            .py-2.w-80
+                img(src="./images/line_lg.png", alt="", width="100%", height="auto")
+            .py-2.f-grey.f-md.px-4
                 | 環抱谷關溫泉，右倚八仙山，悠閒放鬆，享受生活
 
             .ground
@@ -33,13 +33,19 @@ block body_content
             .py-2.f-main.f-lg.font-weight-bold
                 | 關於松鶴山水
             .py-2
-                img(src="./images/title_02.png", alt="", width="779", height="55")
+                img(src="./images/title_02.png", alt="", width="100%", height="auto")
             .w-75.py-2.f-grey.f-sm
                 | Shanshuei B&amp;B
                 br
                 | 台中谷關‧松鶴山水 位於台中市和平區，層疊群山環繞的環境有著清逸秀麗的美麗風景，讓人感到身心舒暢，彷彿所有煩憂都被隔絕在這綠油油的山林之外，四周充t斥著芬多精，大口呼吸便能感覺清新的空氣在體內沸騰，帶給您都市沒有的愜意自在。
             .w-75.py-3
-                .gmc
+                .visible-sm-down.text-center
+                    img.mb-3(src="./images/g01.jpg" alt="" width="100%" height="auto")
+                    img.mb-3(src="./images/g02.jpg" alt="" width="100%" height="auto")
+                    img.mb-3(src="./images/g03.jpg" alt="" width="100%" height="auto")
+                    img.mb-3(src="./images/g04.jpg" alt="" width="100%" height="auto")
+                    img.mb-3(src="./images/g05.jpg" alt="" width="100%" height="auto")
+                .gmc.hidden-sm-down
                     .btn.right-btn(onclick="galleryRight()") ▶
                     .btn.left-btn(onclick="galleryLeft()") ◀
                     .gm(data-fancybox="gallery" href="./images/g01.jpg" index="0")
@@ -54,10 +60,10 @@ block body_content
                         img(src="./images/g05.jpg" alt="" width="auto" height="100%")
 
             .h-100px
-        .parallax_right.sm.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_01.png", data-speed="1.4", data-z-index="2")
-        .parallax_right.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_01.png", data-speed="0.2", data-z-index="2")
-        .parallax_left.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_02.png", data-speed="0.6", data-z-index="2")
-        .parallax_left.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_02.png", data-speed="0.2", data-z-index="2")
+        .hidden-sm-down.parallax_right.sm.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_01.png", data-speed="1.4", data-z-index="2")
+        .hidden-sm-down.parallax_right.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_01.png", data-speed="0.2", data-z-index="2")
+        .hidden-sm-down.parallax_left.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_02.png", data-speed="0.6", data-z-index="2")
+        .hidden-sm-down.parallax_left.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_02.png", data-speed="0.2", data-z-index="2")
     section.box-shadow-inset
         .h-200px.o-h.parallax-window(data-parallax="scroll", data-image-src="./images/image_02.jpg", data-speed="0.5")
             //- img(src="./images/image_02.jpg", alt="", width="100%", height="auto")
@@ -96,14 +102,14 @@ block body_content
                 .col-12.col-md-8
                     img(src="./images/forest_01.png", alt="", width="100%", height="auto")
             .h-100px
-        .parallax_right.sm.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_03.png", data-speed="0.6", data-z-index="2")
-        .parallax_right.lg.h-200.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_03.png", data-speed="0.2", data-z-index="2")
+        .hidden-sm-down.parallax_right.sm.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_03.png", data-speed="0.6", data-z-index="2")
+        .hidden-sm-down.parallax_right.lg.h-200.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_03.png", data-speed="0.2", data-z-index="2")
     section.d-relative
         .container.d-flex.flex-column.align-items-center.justfy-content-center
             .py-2.f-main.f-lg.font-weight-bold
                 | 松鶴周邊
             .py-2
-                img(src="./images/title_05.png", alt="", width="1024", height="auto")
+                img(src="./images/title_05.png", alt="", width="100%", height="auto")
             .py-2.f-green.f-sm
                 | 【童螢季】
             .w-75.pb-4.f-grey.f-sm
@@ -117,6 +123,6 @@ block body_content
             .w-75.pb-4.f-grey.f-sm
                 | Shanshuei B&amp;B 位於台中市和平區，層疊群山環繞的環境有著清逸秀麗的美麗風景，讓人感到身心舒暢，彷彿所有煩憂都被隔絕在這綠油油的山林之外，四周充t斥著芬多精，大口呼吸便能感覺清新的空氣在體內沸騰，帶給您都市沒有的愜意自在。
             .h-100px
-        .parallax_left.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_04.png", data-speed="0.6", data-z-index="2")
-        .parallax_left.h-200.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_04.png", data-speed="0.2", data-z-index="2")
+        .hidden-sm-down.parallax_left.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_04.png", data-speed="0.6", data-z-index="2")
+        .hidden-sm-down.parallax_left.h-200.lg.parallax-window(data-parallax="scroll", data-image-src="./images/leaf_b_04.png", data-speed="0.2", data-z-index="2")
     script(src="./js/index.js")

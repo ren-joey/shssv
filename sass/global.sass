@@ -1,8 +1,9 @@
 @import variables
+@import mixins/rwd
 
 body
     font-size: 16px
-    font-family: "Microsoft JhengHei"
+    font-family: 'Noto Sans TC', sans-serif, "Microsoft JhengHei"
 
 img:not([width])
     width: 100%
@@ -72,8 +73,20 @@ img:not([width])
 .o-h
     overflow: hidden
 
+.pt-80px
+    padding-top: 80px
+
 .w-50px
     width: 50px
+
+.w-80
+    width: 80%
+
+.h-20px
+    height: 20px
+
+.h-50px
+    height: 50px
 
 .h-100px
     height: 100px
@@ -95,3 +108,23 @@ img:not([width])
 
 .box-shadow-inset
     box-shadow: 0 0 50px black inset
+
+.visible-sm-down
+    display: none
+
+.click-label
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+
+.click-checkbox
+    position: absolute
+    opacity: 0
+
++breakpoint(sm)
+    .hidden-sm-down
+        display: none !important
+    .visible-sm-down
+        display: block

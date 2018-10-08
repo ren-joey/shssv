@@ -1,12 +1,86 @@
 @import variables
+@import mixins/rwd
 
-.gallery_bar
+.room-ad
+    +breakpoint(sm)
+        margin-bottom: calc( 100% / 4 + 50px )
+
+.room-cover
+    width: 100%
+    position: relative
+    padding-bottom: calc(100%/3)
+    background-size: cover
+    background-position: center center
+    transition: .3s all
+    +breakpoint(md)
+        padding-bottom: 100%
+
+.gallery-bar
     position: absolute
     left: 50px
     bottom: 50px
+    width: 30%
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5)
+    border: 3px solid white
+    display: flex
+    .gallery-bar-item
+        flex: 1
+        .gallery-bar-item-content
+            width: 100%
+            position: relative
+            padding-top: 100%
+            background-color: black
+            border: 1px solid white
+            background-position: center center
+            background-size: cover
+    +breakpoint(lg)
+        width: 40%
+    +breakpoint(md)
+        width: 50%
+    +breakpoint(sm)
+        width: 100%
+        left: 0
+        bottom: 0
+        right: 0
+        transform: translateY(100%)
 
 .room-info-title
     position: absolute
     left: 2rem
     top: 0
     transform: translateY(-50%)
+
+.button-icon
+    position: absolute
+    font-size: 1.4rem
+    right: 10px
+    top: 50%
+    transform: translateY(-50%)
+
+.rooms-option-checkbox-label
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+
+.rooms-option
+    position: absolute
+    left: -1px
+    right: -1px
+    top: 40px
+    height: 0
+    transition: .5s all
+    background-color: white
+    overflow: hidden
+    border: 1px solid #AAA
+    opacity: 0
+    .room-button
+        display: block
+
+.rooms-option-checkbox
+    opacity: 0
+    &:checked
+        + .rooms-option
+            height: 245px
+            opacity: 1
