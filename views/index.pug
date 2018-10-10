@@ -11,7 +11,7 @@ block head_end
     link(rel="stylesheet", href="./css/index.css")
 
 block body_content
-    .h-100vh.o-h.parallax-window.box-shadow-inset(data-parallax="scroll", data-image-src="./images/image_01.jpg", data-speed="0.5")
+    .shssv-container.h-100vh.o-h.parallax-window.box-shadow-inset(data-parallax="scroll", data-image-src="./images/image_01.jpg", data-speed="0.5")
         .shssv_ad
             .py-2
                 img(src="./images/svg_16_logo_shield.svg", alt="", width="100", height="auto")
@@ -19,9 +19,10 @@ block body_content
                 img(src="./images/svg_15_logo_tw_lg.svg", alt="", width="310", height="auto")
             .py-2.w-80
                 img(src="./images/svg_14_logo_en.svg", alt="", width="100%", height="auto")
-            .py-2.w-80
-                img(src="./images/line_lg.png", alt="", width="100%", height="auto")
-            .py-2.f-grey.f-md.px-4
+            .py-4.w-80.d-relative.overflow-hidden
+                .xy-center
+                    img.d-block(src="./images/line_lg.png", alt="", width="auto", height="auto")
+            .py-2.f-grey.f-md.px-4.text-center
                 | 環抱谷關溫泉，右倚八仙山，悠閒放鬆，享受生活
 
             .ground

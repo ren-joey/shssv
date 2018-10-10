@@ -1,34 +1,45 @@
 extends ./_global/page
 
 block head_end
+    // fancyapps v3.5.2
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js")
+
     link(rel="stylesheet", href="./css/rooms.css")
     script(src="./js/rooms.js")
 
 block body_content
     main.wrapper
         #ROOM_AD.room-ad.section.d-relative.pt-80px
-            #ROOM_COVER.room-cover(style="background-image: url(./images/rooms/201/03.jpg)")
+            #ROOM_COVER.room-cover(style="background-image: url(./images/rooms/302/03.jpg)")
+                #ROOM_BOARD.room-board
+                    .f-main.f-md.text-center
+                        |沐浴森林
+                        br
+                        |四人房
             .gallery-bar
                 .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/03.jpg)")
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/03.jpg)", href="./images/rooms/302/03.jpg", data-fancybox="images")
                 .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/09.jpg)")
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/05.jpg)", href="./images/rooms/302/05.jpg", data-fancybox="images")
                 .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/05.jpg)")
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/06.jpg)", href="./images/rooms/302/06.jpg", data-fancybox="images")
                 .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/06.jpg)")
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/07.jpg)", href="./images/rooms/302/07.jpg", data-fancybox="images")
 
         section
             .h-50px.hidden-sm-down
             .container
                 .row
-                    .col-12.col-md-8
+                    .col-12.order-2.col-md-8.order-md-1
                         .room-info
                             .room-capacity.rounded.bg-main.text-white.d-flex.align-items-center.f-md.px-4.py-1
-                                div 可容納房客數 2 人
+                                div 可容納房客數 4 人
                                 .ml-auto.d-flex
-                                    img.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
-                                    img.d-block(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.hidden-sm-down.d-block(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
                             .room-tools.rounded.border.px-4.py-3.f-main.mt-5.d-relative
                                 .room-info-title.f-main.f-md.bg-white.px-3.py-2
                                     | 住戶守則
@@ -102,32 +113,43 @@ block body_content
                                         .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
                                             .img-7-5.mb-2(style="background-image: url(./images/services_12_hair.png)")
                                             | 吹風機
-                    .col-12.col-md-4
+                    .col-12.order-1.col-md-4.order-md-2.mb-4
                         .border.p-4
                             .f-lg.f-main.font-weight-bold
-                                | 清新雙人房
-                            .d-flex.f-xs.f-main
-                                .px-1 2位
-                                .px-1 1間臥室
-                                .px-1 1張床
-                                .px-1 1間浴室
+                                | 【302】沐浴森林四人房
                             .my-2
                                 .main-line(style="background-image: url(./images/line_sm.png);")
+                            .d-flex.flex-column.f-xs.f-main
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-male
+                                    i.fas.fa-female.mr-2
+                                    | 4位房客
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-cube.mr-2
+                                    | 1間臥室及1間樓中樓
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-bed.mr-2
+                                    | 2張雙人床
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-shower.mr-2
+                                    | 1間浴室
+
                             .f-grey.f-sm
-                                | 房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹
-                            .mt-5
-                                button.d-relative.btn.btn-outline-grey.rounded.px-3.py-2.w-100
+                                //- | 房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹
+                            .mt-5.room-selection
+                                button.d-relative.btn.btn-outline-grey.rounded.px-3.py-2.w-100.mt-2
                                     | 其他房型
-                                    i.button-icon.fas.fa-caret-down
+                                    i.button-icon.fas.fa-caret-down.hidden-sm-down
+                                    i.button-icon.fas.fa-caret-up.visible-sm-down
                                     label.rooms-option-checkbox-label(for="ROOMS_OPTION_CHECKBOX")
                                     input#ROOMS_OPTION_CHECKBOX.rooms-option-checkbox(type="checkbox")
                                     .rooms-option
-                                        a.room-button.px-3.py-2.border-bottom 201
-                                        a.room-button.px-3.py-2.border-bottom 202
-                                        a.room-button.px-3.py-2.border-bottom 203
-                                        a.room-button.px-3.py-2.border-bottom 301
-                                        a.room-button.px-3.py-2.border-bottom 302
-                                        a.room-button.px-3.py-2.border-bottom 303
+                                        a.room-button.px-3.py-2.border-bottom(href="room_201.html") 【201】地中海主題四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_202.html") 【202】清新雙人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_203.html") 【203】歐風雙人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_301.html") 【301】鄉村木造四人房
+                                        a.room-button.btn-main.text-light.px-3.py-2.border-bottom 【302】沐浴森林四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_303.html") 【303】樓中樓木造四人房
                                 button.btn.btn-main.rounded.px-3.py-2.w-100.mt-2
                                     | 馬上預定
             .h-50px

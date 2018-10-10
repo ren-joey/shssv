@@ -1,4 +1,5 @@
 @import variables
+@import mixins/rwd
 
 .shssv_ad
     position: absolute
@@ -18,6 +19,10 @@
         flex-direction: column
         justify-content: flex-end
         background-color: white
+    +breakpoint(sm)
+        padding-top: 120px
+        .ground
+            height: auto
 
 .parallax-window
     background: transparent;
@@ -46,7 +51,7 @@
         cursor: pointer
 
     .right-btn
-        right: 0    
+        right: 0
 
     .left-btn
         left: 0
@@ -56,3 +61,8 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+
++breakpoint(sm)
+    .shssv-container
+        background-position: bottom center !important
+        background-size: contain !important

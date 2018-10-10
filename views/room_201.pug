@@ -1,0 +1,155 @@
+extends ./_global/page
+
+block head_end
+    // fancyapps v3.5.2
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js")
+
+    link(rel="stylesheet", href="./css/rooms.css")
+    script(src="./js/rooms.js")
+
+block body_content
+    main.wrapper
+        #ROOM_AD.room-ad.section.d-relative.pt-80px
+            #ROOM_COVER.room-cover(style="background-image: url(./images/rooms/201/03.jpg)")
+                #ROOM_BOARD.room-board
+                    .f-main.f-md.text-center
+                        |地中海
+                        br
+                        |主題四人房
+            .gallery-bar
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/03.jpg)", href="./images/rooms/201/03.jpg", data-fancybox="images")
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/09.jpg)", href="./images/rooms/201/09.jpg", data-fancybox="images")
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/05.jpg)", href="./images/rooms/201/05.jpg", data-fancybox="images")
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/06.jpg)", href="./images/rooms/201/06.jpg", data-fancybox="images")
+
+        section
+            .h-50px.hidden-sm-down
+            .container
+                .row
+                    .col-12.order-2.col-md-8.order-md-1
+                        .room-info
+                            .room-capacity.rounded.bg-main.text-white.d-flex.align-items-center.f-md.px-4.py-1
+                                div 可容納房客數 4 人
+                                .ml-auto.d-flex
+                                    img.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                    img.d-block(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                            .room-tools.rounded.border.px-4.py-3.f-main.mt-5.d-relative
+                                .room-info-title.f-main.f-md.bg-white.px-3.py-2
+                                    | 住戶守則
+                                .row
+                                    .col-12.col-lg-6.border-right.p-2.f-xs
+                                        ul
+                                            li 退房時間為早上11點，敬請配合
+                                            li 深夜23:00後馬達停止，屆時水壓較小，熱水需稍作等候
+                                            li 請愛惜會館設備，如有損壞需照價賠償
+                                            li 請勿使用高功率設備以免跳電(如電暖爐、電磁爐等)
+                                            li 離開時請隨手關閉冷氣節約能源
+                                            li 電熱水壺僅供煮開水使用
+                                    .col-12.col-lg-6.p-2.f-xs
+                                        ul
+                                            li 客房內禁止吸菸
+                                            li 客房內禁止開伙
+                                            li 請勿攜帶寵物入住
+                                            li 早上9:00前及深夜23:00後請勿喧嘩
+                                    .col-12.text-center.f-2xs.mt-4
+                                        p
+                                            | 良好的居住品質，需要大家共同維護
+                                            br
+                                            span.f-sm 謝謝配合
+                            .room-services.mt-5
+                                .row
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_01_lock.png)")
+                                            | 感應門禁
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_02_park.png)")
+                                            | 專屬車位
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_03_view.png)")
+                                            | 超大景館
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_04_bottle.png)")
+                                            | 電熱水瓶
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_05_tea.png)")
+                                            | 茶包
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_06_coffee.png)")
+                                            | 咖啡包
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_07_wifi.png)")
+                                            | 無線網路
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_08_tv.png)")
+                                            | 電視
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_09_washing.png)")
+                                            | 盥洗用具
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_10_sleep.png)")
+                                            | 寢具
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_11_coffee.png)")
+                                            | 共用咖啡機
+                                    .col-4.col-lg-3
+                                        .rounded.bg-light-grey.f-main.text-center.mb-3.p-2
+                                            .img-7-5.mb-2(style="background-image: url(./images/services_12_hair.png)")
+                                            | 吹風機
+                    .col-12.order-1.col-md-4.order-md-2.mb-4
+                        .border.p-4
+                            .f-lg.f-main.font-weight-bold
+                                | 【201】地中海主題四人房
+                            .my-2
+                                .main-line(style="background-image: url(./images/line_sm.png);")
+                            .d-flex.flex-column.f-xs.f-main
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-male
+                                    i.fas.fa-female.mr-2
+                                    | 4位房客
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-cube.mr-2
+                                    | 1間臥室
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-bed.mr-2
+                                    | 1張雙人床及2張單人床
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-shower.mr-2
+                                    | 1間浴室
+
+                            .f-grey.f-sm
+                                //- | 房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹
+                            .mt-5.room-selection
+                                button.d-relative.btn.btn-outline-grey.rounded.px-3.py-2.w-100.mt-2
+                                    | 其他房型
+                                    i.button-icon.fas.fa-caret-down.hidden-sm-down
+                                    i.button-icon.fas.fa-caret-up.visible-sm-down
+                                    label.rooms-option-checkbox-label(for="ROOMS_OPTION_CHECKBOX")
+                                    input#ROOMS_OPTION_CHECKBOX.rooms-option-checkbox(type="checkbox")
+                                    .rooms-option
+                                        a.room-button.btn-main.text-light.px-3.py-2.border-bottom 【201】地中海主題四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_202.html") 【202】清新雙人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_203.html") 【203】歐風雙人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_301.html") 【301】鄉村木造四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_302.html") 【302】沐浴森林四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_303.html") 【303】樓中樓木造四人房
+                                button.btn.btn-main.rounded.px-3.py-2.w-100.mt-2
+                                    | 馬上預定
+            .h-50px
