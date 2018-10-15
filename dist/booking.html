@@ -38,19 +38,10 @@
         <!-- global style-->
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/main.css">
-        <!-- parallax.js-->
-        <script src="./libraries/parallax.min.js"></script>
-        <link rel="stylesheet" href="./css/index.css">
-        <style type="text/css">
-            body{
-                height: 3000px;
-            }
-            .parallax-window{
-                min-height: 400px;
-                background: transparent;
-            }
-            
-        </style>
+        <link rel="stylesheet" href="./css/scenery.css">
+        <script src="./js/scenery.js"></script>
+        <!-- isotope-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
     </head>
     <body>
         <header class="header_bar align-items-center"><a class="brand px-3" href="./index.html"><img src="./images/svg_01_logo.svg" alt="" width="150" height="auto"></a>
@@ -61,6 +52,9 @@
                 <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="./booking.html">馬上預定</a></div>
             </div>
         </header>
-        <div class="parallax-window" data-parallax="scroll" data-image-src="./images/image_01.jpg"></div>
+        <main class="wrapper">
+            <div style="position: relative; overflow: hidden; width: 100vw; height: calc(100% - 80px); margin-top: 80px;"></div>
+            <iframe src="https://traiwan.com/official/api_booking.php?id=shanshuei" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        </main>
     </body>
 </html>

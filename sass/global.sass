@@ -16,6 +16,17 @@ img:not([width])
     padding-top: calc( (100% + 1rem) * 5 / 7)
     background-size: cover
 
+.img-4-3
+    width: 100%
+    padding-top: calc( 100% * 3 / 4 )
+    position: relative
+    overflow: hidden
+    img
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+
 .f-2xl
     font-size: 3.6rem
     letter-spacing: 4px
@@ -88,6 +99,9 @@ img:not([width])
 .h-50px
     height: 50px
 
+.h-80px
+    height: 80px
+
 .h-100px
     height: 100px
 
@@ -132,7 +146,7 @@ img:not([width])
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(-50%,-50%)
+    transform: translate(-50%, -50%)
 
 .overflow-hidden
     overflow: hidden
@@ -142,3 +156,15 @@ img:not([width])
         display: none !important
     .visible-sm-down
         display: block
+
++breakpoint(md)
+    .hidden-md-down
+        display: none !important
+
++breakpoint(lg)
+    .hidden-lg-down
+        display: none !important
+
++breakpoint(xl)
+    .hidden-xl-down
+        display: none !important

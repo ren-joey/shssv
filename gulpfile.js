@@ -13,7 +13,9 @@ var paths = {
 
 gulp.task('pug', function () {
     return gulp.src(paths.pug + './*.pug')
-        .pipe(pug())
+        .pipe(pug({
+            pretty: '    '
+        }))
         .pipe(gulp.dest(paths.output))
         .pipe(sync.reload({
             stream: true
