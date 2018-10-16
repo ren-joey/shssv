@@ -13,7 +13,9 @@ var paths = {
 
 gulp.task('pug', function () {
     return gulp.src(paths.pug + './*.pug')
-        .pipe(pug())
+        .pipe(pug({
+            pretty: '    '
+        }))
         .pipe(gulp.dest(paths.output))
         .pipe(sync.reload({
             stream: true
@@ -23,7 +25,7 @@ gulp.task('pug', function () {
 gulp.task('sass', function () {
     return gulp.src(paths.sass + '**/*.sass')
         .pipe(sass({
-            outputStyle: 'compressed'
+            outputStyle: 'expended'
         }))
         .pipe(prefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
             cascade: true

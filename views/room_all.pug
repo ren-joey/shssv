@@ -11,21 +11,19 @@ block head_end
 block body_content
     main.wrapper
         #ROOM_AD.room-ad.section.d-relative.pt-80px
-            #ROOM_COVER.room-cover(style="background-image: url(./images/rooms/201/03.jpg)")
+            #ROOM_COVER.room-cover(style="background-image: url(./images/rooms/303/05.jpg)")
                 #ROOM_BOARD.room-board
-                    .f-main.f-md.text-center
-                        |地中海
-                        br
-                        |主題四人房
+                    .f-main.f-lg.text-center
+                        |包棟方案
             .gallery-bar
                 .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/03.jpg)", href="./images/rooms/201/03.jpg", data-fancybox="images")
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/303/05.jpg)", href="./images/rooms/303/05.jpg", data-fancybox="images")
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/07.jpg)", href="./images/rooms/302/07.jpg", data-fancybox="images")
+                .gallery-bar-item
+                    .gallery-bar-item-content(style="background-image: url(./images/rooms/202/04.jpg)", href="./images/rooms/202/04.jpg", data-fancybox="images")
                 .gallery-bar-item
                     .gallery-bar-item-content(style="background-image: url(./images/rooms/201/09.jpg)", href="./images/rooms/201/09.jpg", data-fancybox="images")
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/05.jpg)", href="./images/rooms/201/05.jpg", data-fancybox="images")
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/201/06.jpg)", href="./images/rooms/201/06.jpg", data-fancybox="images")
 
         section
             .h-50px.hidden-sm-down
@@ -34,12 +32,7 @@ block body_content
                     .col-12.order-2.col-md-8.order-md-1
                         .room-info
                             .room-capacity.rounded.bg-main.text-white.d-flex.align-items-center.f-md.px-4.py-1
-                                div 可容納房客數 4 人
-                                .ml-auto.d-flex
-                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
-                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
-                                    img.hidden-sm-down.d-block.mr-2(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
-                                    img.hidden-sm-down.d-block(src="./images/svg_06_white_person.svg", alt="", height="30", width="auto")
+                                div 可容納房客數 20 人
                             .room-tools.rounded.border.px-4.py-3.f-main.mt-5.d-relative
                                 .room-info-title.f-main.f-md.bg-white.px-3.py-2
                                     | 住戶守則
@@ -116,23 +109,30 @@ block body_content
                     .col-12.order-1.col-md-4.order-md-2.mb-4
                         .border.p-4
                             .f-lg.f-main.font-weight-bold
-                                | 【201】地中海主題四人房
+                                | 包棟方案
                             .my-2
                                 .main-line(style="background-image: url(./images/line_sm.png);")
                             .d-flex.flex-column.f-xs.f-main
                                 .px-1.f-sm.text-nowrap
                                     i.fas.fa-male
                                     i.fas.fa-female.mr-2
-                                    | 4位房客
+                                    | 20位房客
                                 .px-1.f-sm.text-nowrap
                                     i.fas.fa-cube.mr-2
-                                    | 1間臥室
+                                    | 6間臥室及2間樓中樓
                                 .px-1.f-sm.text-nowrap
                                     i.fas.fa-bed.mr-2
-                                    | 1張雙人床及2張單人床
+                                    | 8張雙人床(2張位於樓中樓)
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-bed.mr-2
+                                    | 4張單人床
                                 .px-1.f-sm.text-nowrap
                                     i.fas.fa-shower.mr-2
-                                    | 1間浴室
+                                    | 6間浴室
+                                .px-1.f-sm.text-nowrap
+                                    i.fas.fa-concierge-bell.mr-2
+                                    | 烤肉空間
+
 
                             .f-grey.f-sm
                                 //- | 房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹房型介紹
@@ -144,13 +144,13 @@ block body_content
                                     label.rooms-option-checkbox-label(for="ROOMS_OPTION_CHECKBOX")
                                     input#ROOMS_OPTION_CHECKBOX.rooms-option-checkbox(type="checkbox")
                                     .rooms-option
-                                        a.room-button.btn-main.text-light.px-3.py-2.border-bottom 【201】地中海主題四人房
+                                        a.room-button.px-3.py-2.border-bottom(href="room_201.html") 【201】地中海主題四人房
                                         a.room-button.px-3.py-2.border-bottom(href="room_202.html") 【202】清新雙人房
                                         a.room-button.px-3.py-2.border-bottom(href="room_203.html") 【203】歐風雙人房
                                         a.room-button.px-3.py-2.border-bottom(href="room_301.html") 【301】鄉村木造四人房
                                         a.room-button.px-3.py-2.border-bottom(href="room_302.html") 【302】沐浴森林四人房
                                         a.room-button.px-3.py-2.border-bottom(href="room_303.html") 【303】樓中樓木造四人房
-                                        a.room-button.px-3.py-2.border-bottom(href="room_all.html") 包棟方案
+                                        a.room-button.btn-main.text-light.px-3.py-2.border-bottom 包棟方案
                                 button.btn.btn-main.rounded.px-3.py-2.w-100.mt-2
                                     | 馬上預定
             .h-50px
