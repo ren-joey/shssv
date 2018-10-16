@@ -1,0 +1,13 @@
+extends ./_global/page
+
+block head_end
+    link(rel="stylesheet", href="./css/scenery.css")
+    script(src="./js/scenery.js")
+
+    // isotope
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js")
+
+block body_content
+    main.wrapper
+        div(style="position: relative; overflow: hidden; width: 100vw; height: calc(100% - 80px); margin-top: 80px;")
+        iframe(src="https://traiwan.com/official/api_booking.php?id=shanshuei", frameborder="0", style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;")
