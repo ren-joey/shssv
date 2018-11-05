@@ -5,6 +5,10 @@ block head_end
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js")
 
+    // swiper v4.4.1
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js')
+
     link(rel="stylesheet", href="./css/rooms.css")
     script(src="./js/rooms.js")
 
@@ -18,14 +22,35 @@ block body_content
                         br
                         |四人房
             .gallery-bar
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/03.jpg)", href="./images/rooms/302/03.jpg", data-fancybox="images")
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/05.jpg)", href="./images/rooms/302/05.jpg", data-fancybox="images")
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/06.jpg)", href="./images/rooms/302/06.jpg", data-fancybox="images")
-                .gallery-bar-item
-                    .gallery-bar-item-content(style="background-image: url(./images/rooms/302/07.jpg)", href="./images/rooms/302/07.jpg", data-fancybox="images")
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/03.jpg)", href="./images/rooms/302/03.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/05.jpg)", href="./images/rooms/302/05.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/06.jpg)", href="./images/rooms/302/06.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/07.jpg)", href="./images/rooms/302/07.jpg", data-fancybox="images")
+
+                            //- -
+
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/03.jpg)", href="./images/rooms/302/03.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/05.jpg)", href="./images/rooms/302/05.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/06.jpg)", href="./images/rooms/302/06.jpg", data-fancybox="images")
+                        .swiper-slide
+                            .gallery-bar-item
+                                .gallery-bar-item-content(style="background-image: url(./images/rooms/302/07.jpg)", href="./images/rooms/302/07.jpg", data-fancybox="images")
 
         section
             .h-50px.hidden-sm-down
@@ -153,3 +178,15 @@ block body_content
                                 a.btn.btn-main.rounded.px-3.py-2.w-100.mt-2(href="https://traiwan.com/official/booking.php?id=shanshuei")
                                     | 馬上預定
             .h-50px
+    script.
+        var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        });

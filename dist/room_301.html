@@ -41,6 +41,9 @@
         <!-- fancyapps v3.5.2-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+        <!-- swiper v4.4.1-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
         <link rel="stylesheet" href="./css/rooms.css">
         <script src="./js/rooms.js"></script>
     </head>
@@ -61,17 +64,49 @@
                     </div>
                 </div>
                 <div class="gallery-bar">
-                    <div class="gallery-bar-item">
-                        <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/04.jpg)" href="./images/rooms/301/04.jpg" data-fancybox="images"></div>
-                    </div>
-                    <div class="gallery-bar-item">
-                        <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/06.jpg)" href="./images/rooms/301/06.jpg" data-fancybox="images"></div>
-                    </div>
-                    <div class="gallery-bar-item">
-                        <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/07.jpg)" href="./images/rooms/301/07.jpg" data-fancybox="images"></div>
-                    </div>
-                    <div class="gallery-bar-item">
-                        <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/11.jpg)" href="./images/rooms/301/11.jpg" data-fancybox="images"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/04.jpg)" href="./images/rooms/301/04.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/06.jpg)" href="./images/rooms/301/06.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/07.jpg)" href="./images/rooms/301/07.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/11.jpg)" href="./images/rooms/301/11.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/04.jpg)" href="./images/rooms/301/04.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/06.jpg)" href="./images/rooms/301/06.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/07.jpg)" href="./images/rooms/301/07.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="gallery-bar-item">
+                                    <div class="gallery-bar-item-content" style="background-image: url(./images/rooms/301/11.jpg)" href="./images/rooms/301/11.jpg" data-fancybox="images"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -204,5 +239,18 @@
                 <div class="h-50px"></div>
             </section>
         </main>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            });
+        </script>
     </body>
 </html>
