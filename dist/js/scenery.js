@@ -101,11 +101,30 @@ function mapPopup(e) {
         <div class="row">
             <div class="col-12">
                 <div class="text-nowrap text-dark f-sm">魚之鄉鱘龍魚</div>
-                <p class="f-grey f-xs">餐飲/養殖/休閒<br>以食材去搭配食材,讓食物的味道更有層次<br>鱘龍魚 + 新亞洲無國界料理<br>讓您一再回味的動人料理</p>
+                <p class="f-grey f-xs">
+                    【 創意料理 / 龍魚養殖 / 商務宴客 】<br>★ 主打各式海鮮、鱘龍魚創意料理及養生餐飲<br>鱘龍三寶、鱘龍刺身、岩燒鱘龍件、珍菇玉茸龍首鍋、椒鹽龍骨等多道人氣料理<br><br>★ 漁獲皆來自魚之鄉園區內自行養殖的優質鱘龍魚<br>除了確保健康無毒素，魚苗品質及來源更受到嚴格的把關唷！<br><br>★ 魚之鄉手工嚴選的海中珍寶「珍饌魚子醬」<br>其獨特的鮮味，絕對是您送禮自用皆宜的伴手禮好選擇！
+                </p>
                 <hr>
                 <p class="f-grey f-sm">聯絡電話 (04)2594-3349</p>
             </div>
-            <div class="col-12"><img src="./images/map_list_05.jpg" alt=""></div>
+            <div class="col-12">
+            <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img-4-3"><img src="./images/f-002.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-4-3"><img src="http://www.livefish.com.tw/images/981023-08.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-4-3"><img src="./images/f-001.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-4-3"><img src="./images/f-003.png" alt=""></div>
+                </div>
+            </div>
+            </div>
+            </div>
         </div>`;
                 break;
             case 'MP06':
