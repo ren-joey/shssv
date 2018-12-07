@@ -114,6 +114,11 @@
   .map-popup > .shadow {
     -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
             box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); }
+  .map-popup.popup-left {
+    left: -30px;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%); }
 
 .map-list-each {
   width: 100%; }

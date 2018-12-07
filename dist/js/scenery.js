@@ -32,22 +32,31 @@ function mapPopup(e) {
         let targetID = $(this).attr('id');
         let template = '';
         let content = '';
+        let popupLeftClass = '';
+
+        if(targetID === 'MP05') popupLeftClass = ' popup-left'
 
         switch (targetID) {
+            case 'MP00':
+                content = `
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">松鶴山水本館</div>
+                    </div>
+                </div>
+                `;
+                break;
             case 'MP01':
-                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                content = `
+                <div class="px-3 map-list-title f-md f-grey shadow">
                     <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="text-nowrap text-dark f-sm">德芙蘭農場</div>
-                        <ol class="f-grey f-xs">
-                            <li>露營區</li>
-                            <li>1.兒童遊戲沙坑</li>
-                            <li>2.兒童戲水池</li>
-                            <li>3.溜滑梯</li>
-                            <li>4.森林步道</li>
-                        </ol>
+                        <p class="f-grey f-sm">
+                            四周都是群山環繞，極佳的景觀，讓你遠離都市的紛擾，享受大自然的芬多精，擁有乾溼分離的衛浴，即使在尖峰時間洗澡熱水穩定水壓很夠、小孩最愛的沙坑、溜滑梯、戲水池，使用的是乾淨的山泉水，綠草如茵的草皮，草皮排水性佳，以及很大活動空間，大人小孩可以恣意的奔跑遊玩
+                        </p>
                         <hr>
                         <p class="f-grey f-sm">連絡電話 0955-497-898</p>
                     </div>
@@ -60,8 +69,10 @@ function mapPopup(e) {
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="text-nowrap text-dark f-sm">德芙蘭農場</div>
-                    <p class="f-grey f-xs">狩獵戰場模擬射擊傳統射箭、泰雅手工藝DIY、生態導覽、原住民風味餐、漁獵戰場、捕魚體驗、山林夜間探索<br>集合點：沐樂居民宿</p>
+                    <div class="text-nowrap text-dark f-sm">泰好玩獵人體驗營</div>
+                    <p class="f-grey f-sm">
+                        泰好玩獵人體驗營，從吃到玩任君挑選，體驗活動有狩獵體驗、傳統射箭、山林夜間探索、原藝品DIY等多項豐富體驗活動。吃的部分有竹筒飯、搗小米、烤山豬肉、烤香腸等保證讓您胃口全開。如須了解更多資訊，歡迎各位大小朋友臉書搜尋泰好玩獵人體驗營！
+                    </p>
                     <hr>
                     <p class="f-grey f-sm">聯絡電話 0918-770-439</p>
                 </div>
@@ -75,7 +86,15 @@ function mapPopup(e) {
         <div class="row">
             <div class="col-12">
                 <div class="text-nowrap text-dark f-sm">德芙蘭生態步道</div>
-                <p class="f-grey f-xs">被譽為「谷關最優美的步道」，全程3公里的環狀步道，路段多為緩坡適合全家大小健走</p>
+                <p class="f-grey f-sm">
+                    德芙蘭步道位於博愛村松鶴德芙蘭部落後山附近，步道大部分路段為台電保線道路，沿著東卯山東南面大崩壁裙裾修建，東臨大甲溪；沿途可見陡峭的大岩壁及散落的大、小落岩塊，步道上偶有大石堆疊，得手腳並用攀爬而上；而就地取材的石階，古意盎然。步道沿途可見大葉楠、櫸木及茄苳巨木，還有粗壯的爬藤植物，是步道最大的特色。
+                </p>
+                <ol class="f-grey f-sm">
+                    <li>步道全長3公里</li>
+                    <li>步行約2至3小時</li>
+                </ol>
+                <hr>
+                <p class="f-grey f-sm">位置：台中市和平區</p>
             </div>
             <div class="col-12"><img src="./images/map_list_03.jpg" alt=""></div>
         </div>`;
@@ -87,9 +106,17 @@ function mapPopup(e) {
         <div class="row">
             <div class="col-12">
                 <div class="text-nowrap text-dark f-sm">阿嬌姨的店</div>
-                <p class="f-grey f-xs">販售/寄賣在地山產及食品<br>紅藜饅頭、黑木耳露、五葉松汁、季節水果與蔬菜</p>
+                <p class="f-grey f-sm">
+                    阿嬌姨人很開郎、不買東西、他還是很熱心介紹部落的一切、非常好的媽媽，商店販售/寄賣在地山產及食品，紅藜饅頭、黑木耳露、五葉松汁、季節水果與蔬菜，及生活雜貨。
+                </p>
                 <hr>
-                <p class="f-grey f-sm">聯絡電話 (04)2594-3439</p>
+                <p class="f-grey f-sm">
+                    聯絡電話 (04)2594-3439
+                    <br>
+                    營業時間 上午6:00 - 下午9:00
+                    <br>
+                    地址 台中市和平區東關路一段松鶴二巷
+                </p>
             </div>
             <div class="col-12"><img src="./images/map_list_04.jpg" alt=""></div>
         </div>`;
@@ -100,10 +127,15 @@ function mapPopup(e) {
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="text-nowrap text-dark f-sm">魚之鄉鱘龍魚</div>
-                <p class="f-grey f-xs">餐飲/養殖/休閒<br>以食材去搭配食材,讓食物的味道更有層次<br>鱘龍魚 + 新亞洲無國界料理<br>讓您一再回味的動人料理</p>
+                <p class="f-grey f-sm">
+                    【 創意料理 / 龍魚養殖 / 商務宴客 】<br>★ 主打各式海鮮、鱘龍魚創意料理及養生餐飲<br>鱘龍三寶、鱘龍刺身、岩燒鱘龍件、珍菇玉茸龍首鍋、椒鹽龍骨等多道人氣料理<br>★ 漁獲皆來自魚之鄉園區內自行養殖的優質鱘龍魚<br>除了確保健康無毒素，魚苗品質及來源更受到嚴格的把關唷！<br>★ 魚之鄉手工嚴選的海中珍寶「珍饌魚子醬」<br>其獨特的鮮味，絕對是您送禮自用皆宜的伴手禮好選擇！
+                </p>
                 <hr>
-                <p class="f-grey f-sm">聯絡電話 (04)2594-3349</p>
+                <p class="f-grey f-sm">
+                    聯絡電話 (04)2594-3349<br>
+                    上午9:00 - 下午5:00<br>
+                    地址 台中市和平區東關路一段松鶴一巷20-1號
+                </p>
             </div>
             <div class="col-12"><img src="./images/map_list_05.jpg" alt=""></div>
         </div>`;
@@ -221,11 +253,12 @@ function mapPopup(e) {
         }
 
         template = `
-    <div class="map-popup" id="MP">
-        <div class="rounded border grey-border p-4 mb-5 d-relative bg-white shadow">
-            ${content}
+        <div class="map-popup${popupLeftClass}" id="MP">
+            <div class="rounded border grey-border p-4 mb-5 d-relative bg-white shadow">
+                ${content}
+            </div>
         </div>
-    </div>`;
+        `;
 
         $(this).css('z-index', '3').find('.d-relative').append(template);
     }
