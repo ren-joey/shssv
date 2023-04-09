@@ -1,8 +1,19 @@
 $(function () {
+    $(window).on('scroll', function (e) {
+        if($(window).scrollTop() > 300){
+            $('#back-to-top').fadeIn(500);
+            $('#show-map').fadeIn(500);
+        }else{
+            $('#back-to-top').fadeOut(500);
+            $('#show-map').fadeOut(500);
+        }
+    });
+
     $('#MAP').on('click', function (e) {
             e.stopPropagation();
         }).on('mouseenter', '.map-position', mapPopup)
-        .on('mouseleave', '.map-position', mapPopup);
+        .on('mouseleave', '.map-position', mapPopup)
+        .on('click', '.map-position', mapScrollTo);
 
     $('#ML').isotope({
         itemSelector: '.map-list-each',
@@ -10,15 +21,37 @@ $(function () {
     });
 });
 
-function filter(selector){
+function backToTop() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 300);
+}
+
+function mapScrollTo(e) {
+    let targetInformationIndex = (+$(this).attr('id').replace(/\D/g, '')) - 1;
+    if (targetInformationIndex === -1) return;
+    if (targetInformationIndex >= 13) targetInformationIndex = targetInformationIndex - 13;
+    let informationList = $('#ML').children();
+
+    console.log(targetInformationIndex);
+    console.log(informationList);
+
+    let targetInformation = informationList[targetInformationIndex];
+    $('html, body').animate({
+        scrollTop: (+$(targetInformation).css('top').replace(/[a-z]/g, '')) + ( $(window).height() * .6)
+    }, 500);
+}
+
+function filter(selector) {
+    console.log(selector);
     $('#ML').isotope({
         filter: selector
     });
 
-    if(typeof selector != typeof undefined){
+    if (typeof selector != typeof undefined) {
         $('.map-position' + selector).removeClass('hide');
         $('.map-position').not(selector).addClass('hide');
-    }else{
+    } else {
         $('.map-position').removeClass('hide');
     }
 }
@@ -34,7 +67,7 @@ function mapPopup(e) {
         let content = '';
         let popupLeftClass = '';
 
-        if(targetID === 'MP05') popupLeftClass = ' popup-left'
+        if (targetID === 'MP05' || targetID === 'MP25') popupLeftClass = ' popup-left'
 
         switch (targetID) {
             case 'MP00':
@@ -129,7 +162,9 @@ function mapPopup(e) {
             <div class="col-12">
                 <p class="f-grey f-sm">
                     <div class="text-nowrap text-dark f-sm">魚之鄉鱘龍魚</div>
+                    <p class="f-grey f-sm">
                     【 創意料理 / 龍魚養殖 / 商務宴客 】<br>★ 主打各式海鮮、鱘龍魚創意料理及養生餐飲<br>鱘龍三寶、鱘龍刺身、岩燒鱘龍件、珍菇玉茸龍首鍋、椒鹽龍骨等多道人氣料理<br>★ 漁獲皆來自魚之鄉園區內自行養殖的優質鱘龍魚<br>除了確保健康無毒素，魚苗品質及來源更受到嚴格的把關唷！<br>★ 魚之鄉手工嚴選的海中珍寶「珍饌魚子醬」<br>其獨特的鮮味，絕對是您送禮自用皆宜的伴手禮好選擇！
+                    </p>
                 </p>
                 <hr>
                 <p class="f-grey f-sm">
@@ -268,6 +303,216 @@ function mapPopup(e) {
             <div class="col-12"><img src="./images/map_list_13.jpg" alt=""></div>
         </div>`;
                 break;
+            case 'MP14':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_04_food.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">英英餐廳</div>
+                        <p class="f-grey f-sm">30年在地老店，有鱒魚、土雞、山產、溪產及各式快炒</p>
+                        <hr>
+                        <p class="f-grey f-sm">連絡電話 04-2595-1351</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_14.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP15':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">橫貫公路牌樓</div>
+                        <p class="f-grey f-sm">為東西橫貫公路谷關風景特區地標，牌樓所在處於台8線約34公里處。</p>
+                        <hr>
+                        <p class="f-grey f-sm">聯絡電話 06-2331-2678</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_15.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP16':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_03_present.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">谷關商店街</div>
+                        <p class="f-grey f-sm">商店街全長約墾丁大街的 1/3， 少了喧嘩， 多了寧靜， 是為泡溫泉之前享受谷關美食的絕佳去處。</p>
+                        <!-- <hr> -->
+                        <!-- <p class="f-grey f-sm"> </p> -->
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_16.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP17':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_04_food.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">谷關美食街</div>
+                        <p class="f-grey f-sm">谷關美食街有許多的餐廳，有適合團體遊客吃的合菜(人少可吃三菜一湯)，大多都有鱘龍魚料理。另外也有越南小吃、牛肉麵、水餃、石板烤肉…等。</p>
+                        <!-- <hr> -->
+                        <!-- <p class="f-grey f-sm"></p> -->
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_17.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP18':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">谷關溫泉廣場</div>
+                        <p class="f-grey f-sm">泉質:碳酸氫鹽泉。酸鹼質:PH7.0~8.0</p>
+                        <hr>
+                        <p class="f-grey f-sm">『泡腳池』供應熱溫泉時間</p>
+                        <p class="f-grey f-sm">(平日) 9:00-16:00</p>
+                        <p class="f-grey f-sm">(假日) 9:00-18:00</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_18.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP19':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">捎來吊橋</div>
+                        <p class="f-grey f-sm">相傳臺中市和平區南勢里及自由里一帶，泰雅族的原住民的祖先，原住於捎來溪河谷旁，該部落的頭目名音為「捎來」，後續因陸續建了吊橋而命名為捎來吊橋！</p>
+                        <!-- <hr> -->
+                        <!-- <p class="f-grey f-sm"></p> -->
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_19.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP20':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">捎來步道</div>
+                        <p class="f-grey f-sm">步道取自當地部落頭目之名(音「捎來」)，沿山勢開闢而成，部分路段陡峭，踩踏階梯而上，沿途林蔭繁茂，綠意盎然，登臨觀景亭，則谷關風貌盡收眼底；每當春天櫻花盛開、秋楓轉紅，景色更是美不勝收。</p>
+                        <hr>
+                        <p class="f-grey f-sm">步道全長1.5公里</p>
+                        <p class="f-grey f-sm">步行約1小時30分鐘</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_20.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP21':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">谷關遊客中心(溫泉文化館)</div>
+                        <p class="f-grey f-sm">溫泉文化館為全國第一座以溫泉為主題的展示館，設有互動遊戲區、原住民服飾體驗區、溫泉銘、溫泉沐浴軼史、臺灣常見溫泉種類、溫泉知識電子書、泡湯禮儀與須知、臺灣常見溫泉簡介、世界溫泉簡介、互動益智、影片放映等服務。</p>
+                        <hr>
+                        <p class="f-grey f-sm">電話 04-2595-1496</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_21.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP22':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">桂花溫泉巷</div>
+                        <p class="f-grey f-sm">短短數十公尺的小巷，旁邊飄著淡淡的桂花香，十分適合泡湯午後來此由走一回</p>
+                        <hr>
+                        <p class="f-grey f-sm">開放時間 24小時</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_22.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP23':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">谷關吊橋</div>
+                        <p class="f-grey f-sm">谷關風景區是台中山區知名的遊憩區，在九二一地震之前還是中橫公路最熱鬧的中繼點，如今雖然榮景不再，但專程來溫泉的泡湯客也不在少數，也有攀登谷關七雄和八仙山的登山客會順道前往，谷關吊橋便是當地最知名的景點，也是聯絡兩岸溫泉旅館的重要橋樑。</p>
+                        <hr>
+                        <p class="f-grey f-sm">開放時間 24小時</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_23.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP24':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">四季溫泉會館</div>
+                        <p class="f-grey f-sm">四季溫泉會館巴里島式的建築外觀，全館呈現出十足的南洋休閒風情；</p>
+                        <hr>
+                        <p class="f-grey f-sm">電話 04-2595-1235</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_24.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP25':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">古靈寺</div>
+                        <p class="f-grey f-sm">古靈寺是谷關地區唯一的寺廟，也是當地居民的信仰重心。</p>
+                        <hr>
+                        <p class="f-grey f-sm">地址 424台中市和平區東關路一段溫泉巷8號</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_25.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP26':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">伊豆溫泉</div>
+                        <p class="f-grey f-sm">單純、雅靜，整座伊豆溫泉依著山勢，蜿蜒成一個天然的湯泉園區，風停；雨靜；鳥語；流泉；同大地脈動，隨風石呼吸。</p>
+                        <hr>
+                        <p class="f-grey f-sm">電話 04-2595-0315</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_26.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP27':
+                content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                <div class="w-50px mr-2"><img src="./images/svg_02_travel_entertainment.svg" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-nowrap text-dark f-sm">明治溫泉</div>
+                        <p class="f-grey f-sm">位於台中縣谷關溫泉區內的明治溫泉飯店，是谷關溫泉巷內第一家飯店，以石板及灰色的琉璃屋瓦建造的日式建築，充滿日本風格的恬靜與優雅是明治溫泉飯店的特色，飯店溫泉取自谷關山麓泉水，為往來中橫公路旅客歇腳，泡湯的好地方！</p>
+                        <hr>
+                        <p class="f-grey f-sm">電話 04-2595-1111</p>
+                    </div>
+                    <div class="col-12"><img src="./images/map_list_27.jpg" alt=""></div>
+                </div>`;
+                break;
+            case 'MP28':
+                    content = `<div class="px-3 map-list-title f-md f-grey shadow">
+                    <div class="w-50px mr-2"><img src="./images/svg_05_scene.svg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-nowrap text-dark f-sm">明治溫泉小徑</div>
+                        </div>
+                        <div class="col-12"><img src="./images/map_list_28.jpg" alt=""></div>
+                    </div>`;
+                    break;
         }
 
         template = `

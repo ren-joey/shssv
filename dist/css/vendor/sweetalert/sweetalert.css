@@ -601,6 +601,8 @@ body.swal2-no-backdrop > .swal2-shown {
     color: #cccccc; }
   .swal2-popup::-moz-placeholder {
     color: #cccccc; }
+  .swal2-popup:-ms-input-placeholder {
+    color: #cccccc; }
   .swal2-popup::-ms-input-placeholder {
     color: #cccccc; }
   .swal2-popup::placeholder {

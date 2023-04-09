@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>松鶴山水</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="title" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!-- twitter card start-->
+        <meta property="twitter:card" content="">
+        <meta property="twitter:url" content="//wwww.google.com">
+        <meta property="twitter:title" content="">
+        <meta property="twitter:description" content="">
+        <meta property="twitter:site" content="">
+        <!-- fb start-->
+        <meta property="og:title" content="">
+        <meta property="og:url" content="//wwww.google.com">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="mages/benspic.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="500">
+        <meta property="og:image:height" content="300">
+        <!-- Google Analytics Tracking Code-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156436010-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-156436010-1');
+            
+            
+            
+        </script>
+        <!-- font awesome v5.5.0-->
+        <link rel="stylesheet" href="./libraries/all.min.css">
+        <!-- reset css-->
+        <link rel="stylesheet" href="./css/reset.css">
+        <!-- libraries-->
+        <!-- jQuery 3.3.1-->
+        <script src="./libraries/jquery.min.js"></script>
+        <!-- jQuery 1.11.0-->
+        <!-- Bootstrap 4.0-->
+        <link rel="stylesheet" href="./libraries/bootstrap.min.css">
+        <script src="./libraries/bootstrap.min.js"></script>
+        <!-- GSAP 2.0.1-->
+        <script src="./libraries/TweenMax.js"></script>
+        <!-- global style-->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/scenery.css">
+        <script src="./js/scenery.js"></script>
+        <!-- fancyapps v3.5.2-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+        <!-- swiper v4.4.1-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+        <!-- isotope-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+    </head>
+    <body>
+        <header class="header_bar align-items-center"><a class="brand px-3" href="./index.html"><img src="./images/svg_01_logo.svg" alt="" width="150" height="auto"></a>
+            <div class="navs hidden-sm-down"><a class="nav f-md f-grey px-3" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey px-3" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey px-3" href="https://booking.owlting.com/shssv">馬上預定</a></div>
+            <div class="ml-auto visible-sm-down mr-4 d-relative"><i class="fas fa-bars f-main f-xl"></i>
+                <label class="click-label" for="HEADER_CHECKBOX"></label>
+                <input class="click-checkbox" id="HEADER_CHECKBOX" type="checkbox">
+                <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="https://booking.owlting.com/shssv">馬上預定</a></div>
+            </div>
+        </header>
+        <div id="show-map" style="display: none; position: fixed; right: 20px; bottom: 90px; font-size: 42px; color: cornflowerblue; cursor: pointer; z-index: 2;" href="./images/map_01.png" data-fancybox="images"><a href="./images/map_02.png" data-fancybox="images"></a><i class="fas fa-map-marked-alt"></i></div>
+        <div id="back-to-top" onclick="backToTop()" style="display: none; position: fixed; right: 20px; bottom: 20px; font-size: 50px; color: cornflowerblue; cursor: pointer; z-index: 2;"><i class="fas fa-caret-square-up"></i></div>
+        <main class="wrapper">
+            <div class="h-100px visible-sm-down"></div>
+            <section class="bg-sky pt-5 hidden-sm-down">
+                <div class="container d-relative" id="MAP">
+                    <div class="map-position food" id="MP14">
+                        <div class="d-relative">14</div>
+                    </div>
+                    <div class="map-position scene" id="MP15">
+                        <div class="d-relative">15</div>
+                    </div>
+                    <div class="map-position present" id="MP16">
+                        <div class="d-relative">16</div>
+                    </div>
+                    <div class="map-position food" id="MP17">
+                        <div class="d-relative">17</div>
+                    </div>
+                    <div class="map-position entertainment" id="MP18">
+                        <div class="d-relative">18</div>
+                    </div>
+                    <div class="map-position scene" id="MP19">
+                        <div class="d-relative">19</div>
+                    </div>
+                    <div class="map-position scene" id="MP20">
+                        <div class="d-relative">20</div>
+                    </div>
+                    <div class="map-position entertainment" id="MP21">
+                        <div class="d-relative">21</div>
+                    </div>
+                    <div class="map-position scene" id="MP22">
+                        <div class="d-relative">22</div>
+                    </div>
+                    <div class="map-position scene" id="MP23">
+                        <div class="d-relative">23</div>
+                    </div>
+                    <div class="map-position entertainment" id="MP24">
+                        <div class="d-relative">24</div>
+                    </div>
+                    <div class="map-position scene" id="MP25">
+                        <div class="d-relative">25</div>
+                    </div>
+                    <div class="map-position entertainment" id="MP26">
+                        <div class="d-relative">26</div>
+                    </div>
+                    <div class="map-position entertainment" id="MP27">
+                        <div class="d-relative">27</div>
+                    </div>
+                    <div class="map-position scene" id="MP28">
+                        <div class="d-relative">28</div>
+                    </div><img src="./images/map_02.png" alt="" width="100%" height="auto">
+                    <div class="switch-bar">
+                        <div class="btn-group btn-group-lg"><a class="btn btn-info" href="./scenery.html">松鶴地區</a>
+                            <button class="btn btn-info active" disabled>谷關地區</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery_bar"></div>
+            </section>
+            <section>
+                <div class="text-center visible-sm-down">
+                    <div class="btn-group btn-group-lg"><a class="btn btn-info" href="./scenery.html">松鶴地區</a>
+                        <button class="btn btn-info active" disabled>谷關地區</button>
+                    </div>
+                </div>
+                <div class="container mt-4">
+                    <div class="map-list-menu mb-5 text-center f-lg"><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter()">全部</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.scene')">風景</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.entertainment')">娛樂</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.food')">美食</a><a class="f-md f-main px-3" href="javascript: void(0);" onclick="filter('.present')">送禮</a></div>
+                    <div class="map-list d-flex flex-column" id="ML">
+                        <div class="map-list-each food rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon mr-2"></div>
+                                <div class="text-nowrap">14. 英英餐廳</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">30年在地老店，有鱒魚、土雞、山產、溪產及各式快炒</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">連絡電話 04-2595-1351<br>地址 424臺中市和平區東關路一段202號<br>開放時間 9:00-21:00<br></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_14.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon mr-2"></div>
+                                <div class="text-nowrap">15. 橫貫公路牌樓</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">為東西橫貫公路谷關風景特區地標，牌樓所在處於台8線約34公里處。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">聯絡電話 06-2331-2678<br>地址 424臺中市和平區東關路一段138號<br>開放時間 9:00-21:00</p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_15.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each present rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">16. 谷關商店街</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">商店街全長約墾丁大街的 1/3， 少了喧嘩， 多了寧靜， 是為泡溫泉之前享受谷關美食的絕佳去處。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">地址 424台中市和平區東關路一段<br><a href="https://goo.gl/maps/UrerwpFYax8EYVRb6" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a><br><a href="https://yukiblog.tw/read-11575.html" target="_blank"><i class="fas fa-globe-asia mr-2"></i>照片來源 Yuki's Life&nbsp;</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_16.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each food rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">17. 谷關美食街</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">谷關美食街有許多的餐廳，有適合團體遊客吃的合菜(人少可吃三菜一湯)，大多都有鱘龍魚料理。另外也有越南小吃、牛肉麵、水餃、石板烤肉…等。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">地址 424台中市和平區東關路一段<br><a href="https://goo.gl/maps/2tjKQTPaFRWT16tf8" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a><br><a href="http://www.mikey-remona.com/detail/1136" target="_blank"><i class="fas fa-globe-asia mr-2"></i>照片來源 跟著Mickey一家去旅行&nbsp;</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_17.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each entertainment rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">18. 谷關溫泉廣場</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">泉質:碳酸氫鹽泉。酸鹼質:PH7.0~8.0</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">『泡腳池』供應熱溫泉時間<br>(平日) 9:00-16:00<br>(假日) 9:00-18:00<br>地址 424台中市和平區中部橫貫公路116<br><a href="https://goo.gl/maps/7uSzmR1sAFis4eDY9" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_18.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">19. 捎來吊橋</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">相傳臺中市和平區南勢里及自由里一帶，泰雅族的原住民的祖先，原住於捎來溪河谷旁，該部落的頭目名音為「捎來」，後續因陸續建了吊橋而命名為捎來吊橋！</p><a href="https://goo.gl/maps/hxur7D73M4o9orVc6" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_19.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">20. 捎來步道</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">步道取自當地部落頭目之名(音「捎來」)，沿山勢開闢而成，部分路段陡峭，踩踏階梯而上，沿途林蔭繁茂，綠意盎然，登臨觀景亭，則谷關風貌盡收眼底；每當春天櫻花盛開、秋楓轉紅，景色更是美不勝收。本步道全身約1500公尺，時間約1小時30分，部份路段陡峭活動前請衡量自身體力。</p>
+                                    <hr>
+                                    <ol class="f-grey f-sm">
+                                        <li>步道全長1.5公里</li>
+                                        <li>步行約1小時30分鐘</li>
+                                    </ol>
+                                    <hr>
+                                    <p class="f-grey f-sm">【旅遊小叮嚀】<br>步道陡峭，建議穿著防滑鞋類，孕婦、幼童及高血壓患者請衡量自身體力行走。<br>夏季偶有蛇蟲出沒，局部路段偶有落石，請小心慢行。</p>
+                                    <hr><a href="https://goo.gl/maps/DUBE1KSJsJGXFdX88" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_20.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each entertainment rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">21. 谷關遊客中心(溫泉文化館)</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">溫泉文化館為全國第一座以溫泉為主題的展示館，共三層樓(1樓、地下1樓、地下2樓、下方戶外區)的建築中有著可詢問的服務台，現代簡樸的建築內除了提供導覽解說和旅遊資詢外，並設有互動遊戲區、原住民服飾體驗區、溫泉銘、溫泉沐浴軼史、臺灣常見溫泉種類、溫泉知識電子書、泡湯禮儀與須知、臺灣常見溫泉簡介、世界溫泉簡介、互動益智、影片放映、中橫谷關大事紀、溫泉探勘及利用、互動投影區等服務，是遊客深入認識溫泉的好去處。<br><br>而遊客中心外頭的溫泉公園規劃了大片綠地以及較小型的泡腳池，這裡的泡腳池裡還有溫泉親親魚幫大家去角質，還有規劃有戶外表演廣場、休閒步道、生態教育池、公園綠地等。是遊客至此泡湯之餘的絕佳去處。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">電話 04-2595-1496<br>地址 424臺中市和平區博愛里東關路一段102號<br>◎館內開放時間：08:30~17:30<br><a href="https://goo.gl/maps/BXxpjFohSYfwmpR46" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_21.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">22. 桂花溫泉巷</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">短短數十公尺的小巷，旁邊飄著淡淡的桂花香，十分適合泡湯午後來此由走一回</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">開放時間 24小時<br><a href="https://goo.gl/maps/r9rywdkBg7J3KaX29" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_22.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">23. 谷關吊橋</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">谷關風景區是台中山區知名的遊憩區，在九二一地震之前還是中橫公路最熱鬧的中繼點，如今雖然榮景不再，但專程來溫泉的泡湯客也不在少數，也有攀登谷關七雄和八仙山的登山客會順道前往，谷關吊橋便是當地最知名的景點，也是聯絡兩岸溫泉旅館的重要橋樑。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">開放時間 24小時<br><a href="https://goo.gl/maps/QKUV4ss3To18G2s1A" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_23.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each entertainment rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">24. 四季溫泉會館</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">四季溫泉會館巴里島式的建築外觀，全館呈現出十足的南洋休閒風情；<br>館內提供給遊客多元享受的泡湯樂趣，除了湯屋外，泡湯區有棕呂露天溫泉、兒童遊戲區、及針對男女專設的霸王泉和美人湯、獨鍾裸湯的君子泉和玉女湯<br>而位於頂樓的星空情人池和天籟家庭湯屋，更是您最佳的選擇。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">主要服務項目</p>
+                                    <ol class="f-grey f-sm">
+                                        <li>湯屋</li>
+                                        <li>露天溫泉</li>
+                                        <li>SPA按摩池</li>
+                                        <li>男/女裸湯</li>
+                                        <li>蒸氣室/溫泉魚</li>
+                                        <li>四季餐廳</li>
+                                    </ol>
+                                    <hr>
+                                    <p class="f-grey f-sm">電話 04-2595-1235<br>地址 台中市和平區東關路一段溫泉巷8之1號<br><a href="https://goo.gl/maps/bQpt1B7WgmRqYjob6" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_24.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">25. 古靈寺</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">古靈寺是谷關地區唯一的寺廟，也是當地居民的信仰重心。<br>建於昭和25年，在八七水災之時曾被沖走、在民國86年時因電線走火而遭祝融燒毀、在九二一大地震時被損毀，歷經這麼多風雨災難，觀音菩薩卻始終安然無恙，繼續保佑著谷關地區的人民。在谷關遇到大事情或祭典活動一定會盛大的請示觀音，當地的業者對於古靈寺更是倍感尊崇。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">地址 424台中市和平區東關路一段溫泉巷8號<br><a href="https://goo.gl/maps/XKrBgsXUukw8kGm99" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_25.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each entertainment rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">26. 伊豆溫泉</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">單純、雅靜，整座伊豆溫泉依著山勢，蜿蜒成一個天然的湯泉園區，風停；雨靜；鳥語；流泉；同大地脈動，隨風石呼吸。<br>伊豆溫泉位於中部橫貫公路西部起點的谷關風景區，得天獨厚地坐擁高山、溫泉、山谷、溪流與森林遊樂區，在這靜謐而清新的環境中您可以恣意擁抱自然，感受溫泉的生命力。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">電話 04-2595-0315<br>地址 424台中市和平區東關路一段分校巷5號<br><a href="https://goo.gl/maps/FZcTaq9kKYFCw6iL8" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_26.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each entertainment rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">28. 明治溫泉小徑</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8"></div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_28.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-list-each scene rounded border grey-border p-4 mb-5 d-relative">
+                            <div class="px-3 map-list-title bg-white f-md f-grey">
+                                <div class="scenery-icon w-50px mr-2"></div>
+                                <div class="text-nowrap">28. 明治溫泉</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-8">
+                                    <p class="f-grey f-sm">位於台中縣谷關溫泉區內的明治溫泉飯店，是谷關溫泉巷內第一家飯店，以石板及灰色的琉璃屋瓦建造的日式建築，充滿日本風格的恬靜與優雅是明治溫泉飯店的特色，飯店溫泉取自谷關山麓泉水，為往來中橫公路旅客歇腳，泡湯的好地方！<br>明治溫泉飯店泉水清澈，泉質屬於鹼性碳酸泉，含有大量的硫化物，無色、無味、透明清澈，水溫60度，浴後皮膚柔細不滑膩，關節炎、神經痛、胃腸病及香港腳具有療效。</p>
+                                    <hr>
+                                    <p class="f-grey f-sm">電話 04-2595-1111<br>地址 424台中市和平區東關路一段溫泉巷17號<br>照片來源&nbsp;<a href="https://bulanini.pixnet.net/blog">布拉妮妮部落格</a><br><a href="https://goo.gl/maps/S7TkFtQqN5yQ5ouD8" target="_blank"><i class="fas fa-map-marker-alt mr-2"></i>馬上導航</a></p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="img-4-3"><img src="./images/map_list_27.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-100px"></div>
+            </section>
+        </main>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }
+            });
+            
+            var mapSwiper = new Swiper('.map-swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        </script>
+    </body>
+</html>

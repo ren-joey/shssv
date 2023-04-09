@@ -1,3 +1,36 @@
+.scenery-icon {
+  width: 50px;
+  height: 50px;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  background-repeat: no-repeat; }
+
+.entertainment .scenery-icon {
+  background-image: url(../images/svg_02_travel_entertainment.svg); }
+
+.present .scenery-icon {
+  background-image: url(../images/svg_03_present.svg); }
+
+.food .scenery-icon {
+  background-image: url(../images/svg_04_food.svg); }
+
+.scene .scenery-icon {
+  background-image: url(../images/svg_05_scene.svg); }
+
+.switch-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  .switch-bar > div {
+    -webkit-border-radius: 0.3rem;
+            border-radius: 0.3rem;
+    border: 3px solid #fff;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+
 .map-position {
   background-color: #7eaccc;
   color: white;
@@ -88,6 +121,51 @@
   .map-position#MP13 {
     left: 29.85%;
     top: 78.5%; }
+  .map-position#MP14 {
+    left: 5.4%;
+    top: 66.9%; }
+  .map-position#MP15 {
+    left: 19%;
+    top: 52.3%; }
+  .map-position#MP16 {
+    left: 29%;
+    top: 49%; }
+  .map-position#MP17 {
+    left: 28%;
+    top: 45%; }
+  .map-position#MP18 {
+    left: 44.75%;
+    top: 49.69%; }
+  .map-position#MP19 {
+    left: 44.25%;
+    top: 39.09%; }
+  .map-position#MP20 {
+    left: 48.6%;
+    top: 24.8%; }
+  .map-position#MP21 {
+    left: 49.3%;
+    top: 43.5%; }
+  .map-position#MP22 {
+    left: 61.5%;
+    top: 44.5%; }
+  .map-position#MP23 {
+    left: 66.1%;
+    top: 42.2%; }
+  .map-position#MP24 {
+    left: 67.8%;
+    top: 32.8%; }
+  .map-position#MP25 {
+    left: 76.3%;
+    top: 36%; }
+  .map-position#MP26 {
+    left: 69%;
+    top: 70.5%; }
+  .map-position#MP27 {
+    left: 69.5%;
+    top: 41.5%; }
+  .map-position#MP28 {
+    left: 67%;
+    top: 38%; }
   .map-position:hover {
     background-color: #8ebbce;
     -webkit-transform: translate(-2px, -2px);
@@ -102,6 +180,13 @@
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0); }
+
+.map-swiper-container {
+  width: 100%; }
+
+.map-wrapper {
+  position: relative;
+  width: 100%; }
 
 .map-popup {
   width: 300px;

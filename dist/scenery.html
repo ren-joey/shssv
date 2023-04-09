@@ -22,8 +22,19 @@
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="500">
         <meta property="og:image:height" content="300">
-        <!-- font awesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <!-- Google Analytics Tracking Code-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156436010-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-156436010-1');
+            
+            
+            
+        </script>
+        <!-- font awesome v5.5.0-->
+        <link rel="stylesheet" href="./libraries/all.min.css">
         <!-- reset css-->
         <link rel="stylesheet" href="./css/reset.css">
         <!-- libraries-->
@@ -40,6 +51,9 @@
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/scenery.css">
         <script src="./js/scenery.js"></script>
+        <!-- fancyapps v3.5.2-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
         <!-- swiper v4.4.1-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
@@ -48,13 +62,15 @@
     </head>
     <body>
         <header class="header_bar align-items-center"><a class="brand px-3" href="./index.html"><img src="./images/svg_01_logo.svg" alt="" width="150" height="auto"></a>
-            <div class="navs hidden-sm-down"><a class="nav f-md f-grey px-3" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey px-3" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey px-3" href="https://traiwan.com/official/booking.php?id=shanshuei">馬上預定</a></div>
+            <div class="navs hidden-sm-down"><a class="nav f-md f-grey px-3" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey px-3" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey px-3" href="https://booking.owlting.com/shssv">馬上預定</a></div>
             <div class="ml-auto visible-sm-down mr-4 d-relative"><i class="fas fa-bars f-main f-xl"></i>
                 <label class="click-label" for="HEADER_CHECKBOX"></label>
                 <input class="click-checkbox" id="HEADER_CHECKBOX" type="checkbox">
-                <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="https://traiwan.com/official/booking.php?id=shanshuei">馬上預定</a></div>
+                <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="https://booking.owlting.com/shssv">馬上預定</a></div>
             </div>
         </header>
+        <div id="show-map" style="display: none; position: fixed; right: 20px; bottom: 90px; font-size: 42px; color: cornflowerblue; cursor: pointer; z-index: 2;" href="./images/map_01.png" data-fancybox="images"><a href="./images/map_02.png" data-fancybox="images"></a><i class="fas fa-map-marked-alt"></i></div>
+        <div id="back-to-top" onclick="backToTop()" style="display: none; position: fixed; right: 20px; bottom: 20px; font-size: 50px; color: cornflowerblue; cursor: pointer; z-index: 2;"><i class="fas fa-caret-square-up"></i></div>
         <main class="wrapper">
             <div class="h-100px visible-sm-down"></div>
             <section class="bg-sky pt-5 hidden-sm-down">
@@ -101,10 +117,20 @@
                     <div class="map-position present" id="MP13">
                         <div class="d-relative">13</div>
                     </div><img src="./images/map_01.png" alt="" width="100%" height="auto">
+                    <div class="switch-bar">
+                        <div class="btn-group btn-group-lg">
+                            <button class="btn btn-info active" disabled>松鶴地區</button><a class="btn btn-info" href="./scenery_2.html">谷關地區</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="gallery_bar"></div>
             </section>
             <section>
+                <div class="text-center visible-sm-down">
+                    <div class="btn-group btn-group-lg">
+                        <button class="btn btn-info active" disabled>松鶴地區</button><a class="btn btn-info" href="./scenery_2.html">谷關地區</a>
+                    </div>
+                </div>
                 <div class="container mt-4">
                     <div class="map-list-menu mb-5 text-center f-lg"><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter()">全部</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.scene')">風景</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.entertainment')">娛樂</a><a class="f-md f-main px-3 border-right border-grey" href="javascript: void(0);" onclick="filter('.food')">美食</a><a class="f-md f-main px-3" href="javascript: void(0);" onclick="filter('.present')">送禮</a></div>
                     <div class="map-list d-flex flex-column" id="ML">
@@ -117,7 +143,7 @@
                                 <div class="col-12 col-md-8">
                                     <p class="f-grey f-sm">四周都是群山環繞，極佳的景觀，讓你遠離都市的紛擾，享受大自然的芬多精，擁有乾溼分離的衛浴，即使在尖峰時間洗澡熱水穩定水壓很夠、小孩最愛的沙坑、溜滑梯、戲水池，使用的是乾淨的山泉水，綠草如茵的草皮，草皮排水性佳，以及很大活動空間，大人小孩可以恣意的奔跑遊玩</p>
                                     <hr>
-                                    <p class="f-grey f-sm">連絡電話 0955-497-898<br>地址 台中市和平區東關路一段359號<br>網址(FB)&nbsp;<a href="https://www.facebook.com/defland8/" target="_blank" style="font-size: 10px">https://www.facebook.com/defland8/</a></p>
+                                    <p class="f-grey f-sm">連絡電話 0955-497-898<br>地址 台中市和平區東關路一段359號<br><a href="https://www.facebook.com/defland8/" target="_blank"><i class="fas fa-globe-asia mr-2"></i>Facebook粉絲專頁&nbsp;</a></p>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="img-4-3"><img src="./images/map_list_01.jpg" alt=""></div>
@@ -133,7 +159,7 @@
                                 <div class="col-12 col-md-8">
                                     <p class="f-grey f-sm">泰好玩獵人體驗營，從吃到玩任君挑選，體驗活動有狩獵體驗、傳統射箭、山林夜間探索、原藝品DIY等多項豐富體驗活動。吃的部分有竹筒飯、搗小米、烤山豬肉、烤香腸等保證讓您胃口全開。如須了解更多資訊，歡迎各位大小朋友臉書搜尋泰好玩獵人體驗營！</p>
                                     <hr>
-                                    <p class="f-grey f-sm">聯絡電話 0918-770-439<br>線上介紹&nbsp;<a href="https://www.trimt-nsa.gov.tw/Web/News/TourGuide/Theme03.htm" target="_blank" style="font-size: 10px">https://www.trimt-nsa.gov.tw/Web/News/TourGuide/Theme03.htm</a><br>網址(FB)&nbsp;<a href="https://www.facebook.com/HunterOfAtayal/" target="_blank" style="font-size: 10px">https://www.facebook.com/HunterOfAtayal/</a></p>
+                                    <p class="f-grey f-sm">聯絡電話 0918-770-439<br><a href="https://www.trimt-nsa.gov.tw/Web/News/TourGuide/Theme03.htm" target="_blank"><i class="fas fa-globe-asia mr-2"></i>線上介紹&nbsp;</a><br><a href="https://www.facebook.com/HunterOfAtayal/" target="_blank"><i class="fas fa-globe-asia mr-2"></i>Facebook粉絲專頁&nbsp;</a></p>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="img-4-3"><img src="./images/map_list_02.jpg" alt=""></div>
@@ -153,7 +179,7 @@
                                         <li>步行約2至3小時</li>
                                     </ol>
                                     <hr>
-                                    <p class="f-grey f-sm">位置：台中市和平區<br>台灣山林悠遊網&nbsp;<a href="http://recreation.forest.gov.tw/RT/RT_2_1.aspx?TR_ID=051" target="_blank" style="font-size: 10px">http://recreation.forest.gov.tw/RT/RT_2_1.aspx?TR_ID=051</a></p>
+                                    <p class="f-grey f-sm">位置：台中市和平區<br><a href="http://recreation.forest.gov.tw/RT/RT_2_1.aspx?TR_ID=051" target="_blank"><i class="fas fa-globe-asia mr-2"></i>台灣山林悠遊網官方網站&nbsp;</a></p>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="img-4-3"><img src="./images/map_list_03.jpg" alt=""></div>
@@ -169,7 +195,7 @@
                                 <div class="col-12 col-md-8">
                                     <p class="f-grey f-sm">阿嬌姨人很開郎、不買東西、他還是很熱心介紹部落的一切、非常好的媽媽，商店販售/寄賣在地山產及食品，紅藜饅頭、黑木耳露、五葉松汁、季節水果與蔬菜，及生活雜貨。</p>
                                     <hr>
-                                    <p class="f-grey f-sm">聯絡電話 (04)2594-3439<br>營業時間 上午6:00 - 下午9:00<br>地址 台中市和平區東關路一段松鶴二巷<br>網址(FB)&nbsp;<a href="https://www.facebook.com/pages/category/Grocery-Store/%E9%98%BF%E5%AC%8C%E5%A7%A8%E7%9A%84%E5%BA%97-772415489574028/" target="_blank" style="font-size: 10px">https://www.facebook.com/pages/category/Grocery-Store/阿嬌姨的店-772415489574028/</a></p>
+                                    <p class="f-grey f-sm">聯絡電話 (04)2594-3439<br>營業時間 上午6:00 - 下午9:00<br>地址 台中市和平區東關路一段松鶴二巷<br><a href="https://www.facebook.com/pages/category/Grocery-Store/%E9%98%BF%E5%AC%8C%E5%A7%A8%E7%9A%84%E5%BA%97-772415489574028/" target="_blank"><i class="fas fa-globe-asia mr-2"></i>Facebook粉絲專頁&nbsp;</a></p>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="img-4-3"><img src="./images/map_list_04.jpg" alt=""></div>
@@ -185,7 +211,7 @@
                                 <div class="col-12 col-md-8">
                                     <p class="f-grey f-sm">【 創意料理 / 龍魚養殖 / 商務宴客 】<br>★ 主打各式海鮮、鱘龍魚創意料理及養生餐飲<br>鱘龍三寶、鱘龍刺身、岩燒鱘龍件、珍菇玉茸龍首鍋、椒鹽龍骨等多道人氣料理<br>★ 漁獲皆來自魚之鄉園區內自行養殖的優質鱘龍魚<br>除了確保健康無毒素，魚苗品質及來源更受到嚴格的把關唷！<br>★ 魚之鄉手工嚴選的海中珍寶「珍饌魚子醬」<br>其獨特的鮮味，絕對是您送禮自用皆宜的伴手禮好選擇！</p>
                                     <hr>
-                                    <p class="f-grey f-sm">聯絡電話 (04)2594-3349<br>上午9:00 - 下午5:00<br>地址 台中市和平區東關路一段松鶴一巷20-1號<br>網址&nbsp;<a href="http://www.sturgeon.com.tw/html/" target="_blank" style="font-size: 10px">http://www.sturgeon.com.tw/html/</a><br>粉絲專頁&nbsp;<a href="https://www.facebook.com/sturgeonguguan/" target="_blank" style="font-size: 10px">https://www.facebook.com/sturgeonguguan/</a></p>
+                                    <p class="f-grey f-sm">聯絡電話 (04)2594-3349<br>上午9:00 - 下午5:00<br>地址 台中市和平區東關路一段松鶴一巷20-1號<br><a href="http://www.sturgeon.com.tw/html/" target="_blank"><i class="fas fa-globe-asia mr-2"></i>魚之鄉官方網站&nbsp;</a><br><a href="https://www.facebook.com/sturgeonguguan/" target="_blank"><i class="fas fa-globe-asia mr-2"></i>Facebook粉絲專頁&nbsp;</a></p>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="swiper-container">
@@ -340,19 +366,26 @@
         </main>
         <script>
             var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            //- pagination: {
-            //-     el: '.swiper-pagination',
-            //-     clickable: true,
-            //- },
-            //- navigation: {
-            //-     nextEl: '.swiper-button-next',
-            //-     prevEl: '.swiper-button-prev',
-            //- },
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                //- pagination: {
+                //-     el: '.swiper-pagination',
+                //-     clickable: true,
+                //- },
+                //- navigation: {
+                //-     nextEl: '.swiper-button-next',
+                //-     prevEl: '.swiper-button-prev',
+                //- },
+            });
+            
+            var mapSwiper = new Swiper('.map-swiper-container', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
             });
         </script>
     </body>

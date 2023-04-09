@@ -22,8 +22,19 @@
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="500">
         <meta property="og:image:height" content="300">
-        <!-- font awesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <!-- Google Analytics Tracking Code-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156436010-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-156436010-1');
+            
+            
+            
+        </script>
+        <!-- font awesome v5.5.0-->
+        <link rel="stylesheet" href="./libraries/all.min.css">
         <!-- reset css-->
         <link rel="stylesheet" href="./css/reset.css">
         <!-- libraries-->
@@ -49,11 +60,11 @@
     </head>
     <body>
         <header class="header_bar align-items-center"><a class="brand px-3" href="./index.html"><img src="./images/svg_01_logo.svg" alt="" width="150" height="auto"></a>
-            <div class="navs hidden-sm-down"><a class="nav f-md f-grey px-3" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey px-3" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey px-3" href="https://traiwan.com/official/booking.php?id=shanshuei">馬上預定</a></div>
+            <div class="navs hidden-sm-down"><a class="nav f-md f-grey px-3" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey px-3" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey px-3" href="https://booking.owlting.com/shssv">馬上預定</a></div>
             <div class="ml-auto visible-sm-down mr-4 d-relative"><i class="fas fa-bars f-main f-xl"></i>
                 <label class="click-label" for="HEADER_CHECKBOX"></label>
                 <input class="click-checkbox" id="HEADER_CHECKBOX" type="checkbox">
-                <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="https://traiwan.com/official/booking.php?id=shanshuei">馬上預定</a></div>
+                <div class="navs-options"><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./room_201.html">房型介紹</a><a class="nav f-md f-grey py-3 text-nowrap border-bottom" href="./scenery.html">周邊景點</a><a class="nav f-md f-grey py-3 text-nowrap" href="https://booking.owlting.com/shssv">馬上預定</a></div>
             </div>
         </header>
         <main class="wrapper">
@@ -121,24 +132,18 @@
                                     <div class="ml-auto d-flex hidden-sm-down"><img class="d-block mr-2" src="./images/svg_06_white_person.svg" alt="" height="30" width="auto"><img class="d-block mr-2" src="./images/svg_06_white_person.svg" alt="" height="30" width="auto"><img class="d-block mr-2" src="./images/svg_06_white_person.svg" alt="" height="30" width="auto"><img class="d-block" src="./images/svg_06_white_person.svg" alt="" height="30" width="auto"></div>
                                 </div>
                                 <div class="room-tools rounded border px-4 py-3 f-main mt-5 d-relative">
-                                    <div class="room-info-title f-main f-md bg-white px-3 py-2">住戶守則</div>
+                                    <div class="room-info-title f-main f-md bg-white px-3 py-2">住房須知</div>
                                     <div class="row">
-                                        <div class="col-12 col-lg-6 border-right p-2 f-xs">
+                                        <div class="col-12 p-2 f-xs">
                                             <ul>
-                                                <li>退房時間為早上11點，敬請配合</li>
-                                                <li>深夜23:00後馬達停止，屆時水壓較小，熱水需稍作等候</li>
-                                                <li>請愛惜會館設備，如有損壞需照價賠償</li>
-                                                <li>請勿使用高功率設備以免跳電(如電暖爐、電磁爐等)</li>
-                                                <li>離開時請隨手關閉冷氣節約能源</li>
-                                                <li>電熱水壺僅供煮開水使用</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-12 col-lg-6 p-2 f-xs">
-                                            <ul>
-                                                <li>客房內禁止吸菸</li>
-                                                <li>客房內禁止開伙</li>
-                                                <li>請勿攜帶寵物入住</li>
-                                                <li>早上9:00前及深夜23:00後請勿喧嘩</li>
+                                                <li>1.為維護住房品質，本館全面禁止吸菸與炊煮，請勿破壞環境，期間如有違反規定將酌收每日清潔費500元以上不等費用。</li>
+                                                <li>2.嚴禁於房間內酗酒吵鬧，禁止攜帶寵物，請勿使用任何擴音裝置，嚴禁施放任何煙火類物品，晚上11點至早上9點請勿大聲喧嘩，期間禁止外賓進入，請勿影響到其他客人，若經勸導無效，會要求立即退房並且不退還費用。</li>
+                                                <li>3.晚上11點至早上7點加壓馬達會停止，屆時水量會變小，敬請見諒。</li>
+                                                <li>4.晚上大門會關上，若要外出或是晚歸時請攜帶一張房卡，由側邊感應門進出。</li>
+                                                <li>5.退房時間為早上11點，敬請配合。</li>
+                                                <li>6.外出時請將貴重物品隨身攜帶，房間上鎖，冷氣關上，若有物品遺失恕不負責。</li>
+                                                <li>7.若是連續住宿若次日房間內需要打掃必須告知，但貴重及個人物品請收拾好，若有物品遺失恕不負責。</li>
+                                                <li>8.請勿虛報實際住房人數，若是超出房間容納人數，我們有權拒絕入住。</li>
                                             </ul>
                                         </div>
                                         <div class="col-12 text-center f-2xs mt-4">
@@ -155,12 +160,12 @@
                                         </div>
                                         <div class="col-4 col-lg-3">
                                             <div class="rounded bg-light-grey f-main text-center mb-3 p-2">
-                                                <div class="img-7-5 mb-2" style="background-image: url(./images/services_02_park.png)"></div>專屬車位
+                                                <div class="img-7-5 mb-2" style="background-image: url(./images/services_02_face_mountain.png)"></div>面街景與山景
                                             </div>
                                         </div>
                                         <div class="col-4 col-lg-3">
                                             <div class="rounded bg-light-grey f-main text-center mb-3 p-2">
-                                                <div class="img-7-5 mb-2" style="background-image: url(./images/services_03_view.png)"></div>超大景館
+                                                <div class="img-7-5 mb-2" style="background-image: url(./images/services_03_view_balcony.png)"></div>獨立陽台
                                             </div>
                                         </div>
                                         <div class="col-4 col-lg-3">
@@ -224,6 +229,14 @@
                                     <div class="px-1 f-sm text-nowrap"><i class="fas fa-bed mr-2"></i>1張雙人床及2張單人床</div>
                                     <div class="px-1 f-sm text-nowrap"><i class="fas fa-shower mr-2"></i>1間浴室</div>
                                 </div>
+                                <div class="my-2">
+                                    <div class="main-line" style="background-image: url(./images/line_sm.png);"></div>
+                                </div>
+                                <div class="d-flex flex-column f-xs f-main">
+                                    <div class="px-1 f-sm text-nowrap"><i class="fas fa-phone-square-alt mr-2"></i>0901-227-777</div>
+                                    <div class="px-1 f-sm text-nowrap"><i class="fab fa-line mr-2"></i>@shssv</div>
+                                    <div class="px-1 f-sm text-nowrap"><i class="fas fa-envelope-square mr-2"></i>enoonvilla@gmail.com</div>
+                                </div>
                                 <div class="f-grey f-sm"></div>
                                 <div class="mt-5 room-selection">
                                     <button class="d-relative btn btn-outline-grey rounded px-3 py-2 w-100 mt-2">其他房型<i class="button-icon fas fa-caret-down hidden-sm-down"></i><i class="button-icon fas fa-caret-up visible-sm-down"></i>
@@ -231,7 +244,7 @@
                                         <input class="rooms-option-checkbox" id="ROOMS_OPTION_CHECKBOX" type="checkbox">
                                         <div class="rooms-option"><a class="room-button px-3 py-2 border-bottom" href="room_201.html">【201】地中海主題四人房</a><a class="room-button px-3 py-2 border-bottom" href="room_202.html">【202】清新雙人房</a><a class="room-button px-3 py-2 border-bottom" href="room_203.html">【203】歐風雙人房</a><a class="room-button btn-main text-light px-3 py-2 border-bottom">【301】鄉村木造四人房</a><a class="room-button px-3 py-2 border-bottom" href="room_302.html">【302】沐浴森林四人房</a><a class="room-button px-3 py-2 border-bottom" href="room_303.html">【303】樓中樓木造四人房</a><a class="room-button px-3 py-2 border-bottom" href="room_all.html">包棟方案</a></div>
                                     </button>
-                                    <button class="btn btn-main rounded px-3 py-2 w-100 mt-2">馬上預定</button>
+                                    <button class="btn btn-main rounded px-3 py-2 w-100 mt-2" id="bookingNow">馬上預定</button>
                                 </div>
                             </div>
                         </div>
@@ -252,6 +265,13 @@
                 clickable: true,
             },
             });
+            
+            window.onload = () => {
+                const bookingBtn = document.getElementById('bookingNow');
+                bookingBtn.addEventListener('click', () => {
+                    window.location.href = 'https://booking.owlting.com/shssv';
+                })
+            }
         </script>
     </body>
 </html>
